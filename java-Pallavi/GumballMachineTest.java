@@ -298,6 +298,31 @@ public class GumballMachineTest
         gumballM1.turnCrank();
         assertEquals(true, gumballM1.isGumballInSlot());
     }
+    @Test
+    public void TestQDDDDEjectQNegative()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.ejectQuarter();
+        gumballM1.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+
+    @Test
+    public void testGetDNQNoFiftyCentsState()
+    {
+        gumballM1.insertNickel();
+        gumballM1.insertDime();
+        gumballM1.insertQuarter();
+         boolean isNoFiftyCentsState = false;
+        if (gumballM1.getState() instanceof NoFiftyCentsState)
+            isNoFiftyCentsState = true;
+        
+        assertEquals(true, isNoFiftyCentsState);
+      
+    }
 }
 
 
