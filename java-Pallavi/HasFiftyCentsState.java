@@ -11,7 +11,9 @@ public class HasFiftyCentsState implements State {
   
 	public void insertQuarter() {
 		System.out.println("You can't insert another quarter");
-	}
+		gumballMachine.setChange(gumballMachine.getChange()+25);
+		System.out.println("Please turn the crank.");
+           }
  
 	public void ejectQuarter() {
 		System.out.println("Quarter returned");
@@ -21,13 +23,22 @@ public class HasFiftyCentsState implements State {
 	//******Lab2Changes***********
 	public void insertDime() {
 	   System.out.println("You can't insert another dime");
-	   }
+	   gumballMachine.setChange(gumballMachine.getChange()+10);
+	   System.out.println("Please turn the crank.");
+           
+           }
+	   	   
 	public void ejectDime(){
 	   		System.out.println("You haven't inserted a dime");
 	   }
-    public void insertNickel( ) {
-    System.out.println("You can't insert another nickel");
+    public void insertNickel( ) 
+    {
+     System.out.println("You can't insert another nickel");
+      gumballMachine.setChange(gumballMachine.getChange()+5);
+      System.out.println("Please turn the crank. ");
+        
     }
+    
 	public void ejectNickel(){
 	   System.out.println("You haven't inserted a nickel");
 	   }
@@ -37,7 +48,7 @@ public class HasFiftyCentsState implements State {
 		System.out.println("You turned...");
 		gumballMachine.setState(gumballMachine.getSoldState());
 		//Added to reset the totalCoinValue
-		gumballMachine.setTotalCoinValue(0);
+		gumballMachine.setTotalCoinValue(50);
 	}
 
     public void dispense() {

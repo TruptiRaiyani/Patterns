@@ -17,6 +17,7 @@ public class NoFiftyCentsState implements State {
            {
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
            gumballMachine.setChange(gumballMachine.getTotalCoinValue()-50);
+           gumballMachine.setTotalCoinValue(50);
            System.out.println("Please turn the crank. GumballMachine has more than 50 cents");
            }
     }
@@ -33,6 +34,13 @@ public class NoFiftyCentsState implements State {
         gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() + 10);
         if(gumballMachine.getTotalCoinValue()==50)
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           else if (gumballMachine.getTotalCoinValue()>50)
+           {
+           gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           gumballMachine.setChange(gumballMachine.getTotalCoinValue()-50);
+           gumballMachine.setTotalCoinValue(50);
+           System.out.println("Please turn the crank. GumballMachine has more than 50 cents");
+           }
     }
     public void ejectDime(){
     		System.out.println("You haven't inserted a dime");
@@ -42,6 +50,13 @@ public class NoFiftyCentsState implements State {
         gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue()+5);
         if(gumballMachine.getTotalCoinValue()==50)
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           else if (gumballMachine.getTotalCoinValue()>50)
+           {
+           gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           gumballMachine.setChange(gumballMachine.getTotalCoinValue()-50);
+           gumballMachine.setTotalCoinValue(50);
+           System.out.println("Please turn the crank. GumballMachine has more than 50 cents");
+           }
     }
     public void ejectNickel(){
         System.out.println("You haven't inserted a nickel");

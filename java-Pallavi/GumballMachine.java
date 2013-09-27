@@ -73,15 +73,24 @@ public class GumballMachine implements IGumballMachine{
         this.state = state;
     }
  
-    void releaseBall() {
-        System.out.println("A gumball comes rolling out the slot...");
-        is_gumball_in_slot = true;
-        if (count != 0) {
+    void releaseBall() 
+    {
+        if (totalCoinValue == 50){
+          if (count != 0) 
+          {
             count = count - 1;
             totalGumballsInSlot = totalGumballsInSlot + 1;
-        }
+            System.out.println("A gumball comes rolling out the slot...");
+             is_gumball_in_slot = true;
+         }
+        
         if(getChange() > 0)
         System.out.println("Please take the change: " + getChange()+ "cents");
+        
+         setChange(0); 
+         setTotalCoinValue(0);
+    }
+   
     }
  
     int getCount() {
