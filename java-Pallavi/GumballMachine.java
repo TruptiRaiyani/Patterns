@@ -45,11 +45,19 @@ public class GumballMachine implements IGumballMachine{
     public void insertNickel( ) {
         state.insertNickel();
     };
-    public boolean isGumballInSlot( ) {return gumball_in_slot;}
+    public boolean isGumballInSlot( ) {
+        if(gumball_in_slot) {
+            System.out.println("Gumball is in slot...");
+        }
+        else {
+            System.out.println("No Gumball in slot!!!");
+        }
+        return gumball_in_slot;
+    }
     public void takeGumballFromSlot( ) {
         if(gumball_in_slot == true)
         {
-            System.out.println("Gumball Picked");
+            System.out.println("Please take gumball from slot...");
             gumball_in_slot = false;
         }
     };

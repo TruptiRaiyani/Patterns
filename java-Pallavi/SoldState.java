@@ -20,11 +20,15 @@ public class SoldState implements State {
 	public void insertDime( ) {
 	   System.out.println("Please wait, we're already giving you a gumball");
 	   }
-	public void ejectDime(){}
+	public void ejectDime(){
+	   System.out.println("Sorry, you already turned the crank");
+	   }
     public void insertNickel( ) {
     System.out.println("Please wait, we're already giving you a gumball");
 }
-	public void ejectNickel(){}
+	public void ejectNickel(){
+	 System.out.println("Sorry, you already turned the crank");
+	   }
 	
 	//*****End Lab2Changes*********
 	public void turnCrank() {

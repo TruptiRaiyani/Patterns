@@ -14,8 +14,7 @@ import org.junit.Test;
 public class GumballMachineTest
 {
     private GumballMachine gumballM1;
-
-    
+    SoldState soldState = new SoldState(gumballM1);
 
     
 
@@ -120,6 +119,75 @@ public class GumballMachineTest
         
         assertEquals(true, isSoldState);
     
+    }
+    
+    //Checking whether the machine slot already has a gumball in the beginning
+    @Test
+    public void testGumballInSlotInTheBeginning()
+    {
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+
+    //Checking whether gumball will be dispensed before inserting any coin
+    @Test
+    public void testCrankWithoutInsertingAnyCoin()
+    {
+        gumballM1.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+
+    //Try to take a dispensed gumball and crank the machine again without inserting any coin
+    @Test
+    public void testTakeGumballAndCrankAgainWithoutInsertingAnyCoinQQ()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        gumballM1.takeGumballFromSlot();
+        soldState.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+    
+    @Test
+    public void testTakeGumballAndCrankAgainWithoutInsertingAnyCoinQDDN()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.insertNickel();
+        gumballM1.turnCrank();
+        gumballM1.takeGumballFromSlot();
+        soldState.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+    
+    @Test
+    public void testTakeGumballAndCrankAgainWithoutInsertingAnyCoinQDNNN()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertDime();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.turnCrank();
+        gumballM1.takeGumballFromSlot();
+        soldState.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+    
+    @Test
+    public void testTakeGumballAndCrankAgainWithoutInsertingAnyCoinQNNNNN()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.insertNickel();
+        gumballM1.turnCrank();
+        gumballM1.takeGumballFromSlot();
+        soldState.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
     }
     
    

@@ -22,11 +22,15 @@ public class HasFiftyCentsState implements State {
 	public void insertDime() {
 	   System.out.println("You can't insert another dime");
 	   }
-	public void ejectDime(){}
+	public void ejectDime(){
+	   		System.out.println("You haven't inserted a dime");
+	   }
     public void insertNickel( ) {
     System.out.println("You can't insert another nickel");
     }
-	public void ejectNickel(){}
+	public void ejectNickel(){
+	   System.out.println("You haven't inserted a nickel");
+	   }
 	
 	//*****End Lab2Changes*********
 	public void turnCrank() {

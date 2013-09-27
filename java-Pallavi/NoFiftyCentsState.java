@@ -25,14 +25,18 @@ public class NoFiftyCentsState implements State {
         if(gumballMachine.getTotalCoinValue()==50)
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
     }
-    public void ejectDime(){}
+    public void ejectDime(){
+    		System.out.println("You haven't inserted a dime");
+    }
     public void insertNickel() {
         System.out.println("You inserted a nickel");
         gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue()+5);
         if(gumballMachine.getTotalCoinValue()==50)
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
     }
-    public void ejectNickel(){}
+    public void ejectNickel(){
+        System.out.println("You haven't inserted a nickel");
+    }
     
     //*****End Lab2Changes*********
  
