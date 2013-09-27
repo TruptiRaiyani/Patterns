@@ -32,6 +32,8 @@ comment20.params=
 comment20.target=void\ testGumballCount()
 comment21.params=
 comment21.target=void\ testReleaseBallMethod()
+comment22.params=
+comment22.target=void\ testEjectAndCentsBackCheck()
 comment3.params=
 comment3.target=void\ testQQHappy()
 comment4.params=
@@ -47,4 +49,4 @@ comment8.target=void\ testGumballInSlotInTheBeginning()
 comment8.text=\ @Test\n\ \ \ \ public\ void\ testHasFiftyCentsToSoldState()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ gumballM1.insertQuarter();\n\ \ \ \ \ \ \ \ gumballM1.insertQuarter();\n\ \ \ \ \ \ \ \ gumballM1.turnCrank();\n\ \ \ \ \ \ \ \ boolean\ isSoldState\ \=\ false;\n\ \ \ \ \ \ \ \ if\ (gumballM1.getState()\ instanceof\ SoldState)\n\ \ \ \ \ \ \ \ \ \ \ \ isSoldState\ \=\ true;\n\ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ assertEquals(true,\ isSoldState);\n\ \ \ \ \n}
 comment9.params=
 comment9.target=void\ testCrankWithoutInsertingAnyCoin()
-numComments=22
+numComments=23

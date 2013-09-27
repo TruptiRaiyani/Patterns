@@ -284,7 +284,22 @@ public class GumballMachineTest
         gumballM1.turnCrank();
         assertEquals(false, gumballM1.isGumballInSlot());
     }
+
+    @Test // Testing eject method and get cents back method
+    public void testEjectAndCentsBackCheck()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.ejectNickel();
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.insertQuarter();
+        assertEquals(15, gumballM1.getChange());
+        assertEquals(false, gumballM1.isGumballInSlot());
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+    }
 }
+
 
 
 
