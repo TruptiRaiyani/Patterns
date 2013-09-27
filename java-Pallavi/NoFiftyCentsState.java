@@ -25,7 +25,17 @@ public class NoFiftyCentsState implements State {
    
     
     public void ejectQuarter() {
-        System.out.println("You haven't inserted a quarter");
+        //System.out.println("You haven't inserted a quarter");
+         if(gumballMachine.getTotalCoinValue()>=25)
+         {
+              gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 25);
+              System.out.println("Please collect ejected quarter.");
+             
+         }
+         else
+         {
+            System.out.println("Cannot return quarter as machine has " + gumballMachine.getTotalCoinValue()+ " cents.");
+         }
     }
     
     //******Lab2Changes***********
@@ -43,7 +53,17 @@ public class NoFiftyCentsState implements State {
            }
     }
     public void ejectDime(){
-    		System.out.println("You haven't inserted a dime");
+           
+         if(gumballMachine.getTotalCoinValue()>=10)
+         {
+              gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 10);
+              System.out.println("Please collect ejected dime.");
+             
+         }
+         else
+         {
+            System.out.println("Cannot return dime as machine has " + gumballMachine.getTotalCoinValue()+ " cents.");
+         }
     }
     public void insertNickel() {
         System.out.println("You inserted a nickel");
@@ -59,13 +79,22 @@ public class NoFiftyCentsState implements State {
            }
     }
     public void ejectNickel(){
-        System.out.println("You haven't inserted a nickel");
+        if(gumballMachine.getTotalCoinValue()>=5)
+         {
+              gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 5);
+              System.out.println("Please collect ejected nickel.");
+             
+         }
+         else
+         {
+            System.out.println("Cannot return nickel as machine has " + gumballMachine.getTotalCoinValue()+ " cents.");
+         }
     }
     
     //*****End Lab2Changes*********
  
     public void turnCrank() {
-        System.out.println("You turned, but need more money. GumballMachine has "+ gumballMachine.getTotalCoinValue( )+ " coins");
+        System.out.println("You turned, but need more money. GumballMachine has "+ gumballMachine.getTotalCoinValue( )+ "cents");
         
      }
  

@@ -49,6 +49,15 @@ public class GumballMachine implements IGumballMachine{
     public void insertNickel( ) {
         state.insertNickel();
     };
+    
+     public void ejectDime() {
+        state.ejectDime();
+    }
+    
+    public void ejectNickel(){
+        state.ejectNickel();
+    }
+    
     public boolean isGumballInSlot( ) {
         if(is_gumball_in_slot) {
             System.out.println(totalGumballsInSlot + " gumball(s) in slot...");

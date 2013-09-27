@@ -16,7 +16,8 @@ public class HasFiftyCentsState implements State {
            }
  
 	public void ejectQuarter() {
-		System.out.println("Quarter returned");
+		System.out.println("Please collect ejected quarter.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 25);
 		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
 	}
  
@@ -29,7 +30,9 @@ public class HasFiftyCentsState implements State {
            }
 	   	   
 	public void ejectDime(){
-	   		System.out.println("You haven't inserted a dime");
+	     System.out.println("Please collect ejected dime.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 10);
+		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
 	   }
     public void insertNickel( ) 
     {
@@ -40,7 +43,9 @@ public class HasFiftyCentsState implements State {
     }
     
 	public void ejectNickel(){
-	   System.out.println("You haven't inserted a nickel");
+	   System.out.println("Please collect ejected nickel.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 5);
+		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
 	   }
 	
 	//*****End Lab2Changes*********
