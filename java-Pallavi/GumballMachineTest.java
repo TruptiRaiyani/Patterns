@@ -240,6 +240,50 @@ public class GumballMachineTest
     }
 
    
+    @Test //  Inserting only one quareter to get gumball : Need to return false
+    public void testAddOneQuarterNeg()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+
+    @Test // checks to see after inseting 2 quarters and dime : shud not let add dime and gumball comes out
+    public void testAddQQDneg()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.insertDime();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+        gumballM1.takeGumballFromSlot();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
+
+    @Test // Checks too see if gumball count reduces after each gumball taken out
+    public void testGumballCount()
+    {
+        
+        assertEquals(10, gumballM1.getCount());
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+        gumballM1.takeGumballFromSlot();
+        assertEquals(false, gumballM1.isGumballInSlot());
+        assertEquals(9, gumballM1.getCount());
+    }
+
+   
+
+    @Test // test release ball method before inserting coin
+    public void testReleaseBallMethod()
+    {
+        gumballM1.releaseBall();
+        assertEquals(false, gumballM1.isGumballInSlot());
+        gumballM1.turnCrank();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
 }
 
 
