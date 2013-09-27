@@ -47,8 +47,6 @@ public class HasFiftyCentsState implements State {
 	public void turnCrank() {
 		System.out.println("You turned...");
 		gumballMachine.setState(gumballMachine.getSoldState());
-		//Added to reset the totalCoinValue
-		gumballMachine.setTotalCoinValue(50);
 	}
 
     public void dispense() {
