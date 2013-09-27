@@ -121,6 +121,11 @@ public class GumballMachine implements IGumballMachine{
     {
         return totalCoinValue;
     }
+    
+    public int getTotalGumballsInSlot()
+    {
+        return this.totalGumballsInSlot;
+    }
  
     public String toString() {
         StringBuffer result = new StringBuffer();
