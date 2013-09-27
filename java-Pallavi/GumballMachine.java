@@ -9,18 +9,21 @@ public class GumballMachine implements IGumballMachine{
     
     State state = soldOutState;
     int count = 0;
-    private boolean gumball_in_slot;
+    private boolean is_gumball_in_slot;
+    private int totalGumballsInSlot;
     int totalCoinValue = 0;
     private int change;
+    
     public GumballMachine(int numberGumballs) {
         soldOutState = new SoldOutState(this);
         noFiftyCentsState = new NoFiftyCentsState(this);
         hasFiftyCentsState = new HasFiftyCentsState(this);
         soldState = new SoldState(this);
         this.count = numberGumballs;
-        this.gumball_in_slot = false;
+        this.is_gumball_in_slot = false;
         this.totalCoinValue = 0;
         this.change=0;//
+        this.totalGumballsInSlot = 0;
         if (numberGumballs > 0) {
             state = noFiftyCentsState;
         } 
@@ -47,19 +50,20 @@ public class GumballMachine implements IGumballMachine{
         state.insertNickel();
     };
     public boolean isGumballInSlot( ) {
-        if(gumball_in_slot) {
-            System.out.println("Gumball is in slot...");
+        if(is_gumball_in_slot) {
+            System.out.println(totalGumballsInSlot + " gumball(s) in slot...");
         }
         else {
             System.out.println("No Gumball in slot!!!");
         }
-        return gumball_in_slot;
+        return is_gumball_in_slot;
     }
     public void takeGumballFromSlot( ) {
-        if(gumball_in_slot == true)
+        if(is_gumball_in_slot == true)
         {
-            System.out.println("Please take gumball from slot...");
-            gumball_in_slot = false;
+            System.out.println("You took " + totalGumballsInSlot + " gmball(s) from slot...");
+            totalGumballsInSlot = 0;
+            is_gumball_in_slot = false;
         }
     };
     //**********End Lab2 changes********
@@ -71,9 +75,10 @@ public class GumballMachine implements IGumballMachine{
  
     void releaseBall() {
         System.out.println("A gumball comes rolling out the slot...");
-        gumball_in_slot = true;
+        is_gumball_in_slot = true;
         if (count != 0) {
             count = count - 1;
+            totalGumballsInSlot = totalGumballsInSlot + 1;
         }
         if(getChange() > 0)
         System.out.println("Please take the change: " + getChange());

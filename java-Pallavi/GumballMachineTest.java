@@ -107,7 +107,7 @@ public class GumballMachineTest
         assertEquals(true, isHasFiftyCentsState);
     }
     
-    @Test
+   /* @Test
     public void testHasFiftyCentsToSoldState()
     {
         gumballM1.insertQuarter();
@@ -119,7 +119,7 @@ public class GumballMachineTest
         
         assertEquals(true, isSoldState);
     
-    }
+    }*/
     
     //Checking whether the machine slot already has a gumball in the beginning
     @Test
@@ -224,7 +224,22 @@ public class GumballMachineTest
         assertEquals(true, gumballM1.isGumballInSlot());
         assertEquals(0, gumballM1.getTotalCoinValue());
     }
+
+    @Test
+    public void testCountOfGumballsInSlot()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+        gumballM1.takeGumballFromSlot();
+        assertEquals(false, gumballM1.isGumballInSlot());
+    }
 }
+
 
 
 
