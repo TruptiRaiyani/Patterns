@@ -50,7 +50,7 @@ public class NoFiftyCentsState implements State {
     //*****End Lab2Changes*********
  
     public void turnCrank() {
-        System.out.println("You turned, but there's no quarter");
+        System.out.println("You turned, but need more money. GumballMachine only has "+ gumballMachine.getTotalCoinValue( )+ " coins");
         
      }
  

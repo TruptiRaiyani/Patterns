@@ -81,7 +81,7 @@ public class GumballMachine implements IGumballMachine{
             totalGumballsInSlot = totalGumballsInSlot + 1;
         }
         if(getChange() > 0)
-        System.out.println("Please take the change: " + getChange());
+        System.out.println("Please take the change: " + getChange()+ "cents");
     }
  
     int getCount() {

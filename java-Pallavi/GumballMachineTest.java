@@ -238,7 +238,10 @@ public class GumballMachineTest
         gumballM1.takeGumballFromSlot();
         assertEquals(false, gumballM1.isGumballInSlot());
     }
+
+   
 }
+
 
 
 
