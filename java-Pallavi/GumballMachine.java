@@ -113,8 +113,17 @@ public class GumballMachine implements IGumballMachine{
     }
  
     void refill(int count) {
-        this.count = count;
+        if((this.count + count)<=100)
+        {
+        this.count = this.count + count;
         state = noFiftyCentsState;
+        }
+        else
+        {
+            int maxallowed = 100 - this.count;
+            System.out.println("Maximum gumballs stored in gumballmachine can be 100. You can add "
+            + maxallowed);
+        }
     }
 
     public State getState() {
