@@ -122,7 +122,7 @@ public class GumballMachine implements IGumballMachine{
         {
             int maxallowed = 100 - this.count;
             System.out.println("Maximum gumballs stored in this gumballmachine can be 100. You can add "
-            + maxallowed);
+            + maxallowed + " more gumballs");
         }
     }
 
