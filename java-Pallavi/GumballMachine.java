@@ -11,7 +11,7 @@ public class GumballMachine implements IGumballMachine{
     int count = 0;
     private boolean gumball_in_slot;
     int totalCoinValue = 0;
- 
+    private int change;
     public GumballMachine(int numberGumballs) {
         soldOutState = new SoldOutState(this);
         noFiftyCentsState = new NoFiftyCentsState(this);
@@ -20,6 +20,7 @@ public class GumballMachine implements IGumballMachine{
         this.count = numberGumballs;
         this.gumball_in_slot = false;
         this.totalCoinValue = 0;
+        this.change=0;//
         if (numberGumballs > 0) {
             state = noFiftyCentsState;
         } 
@@ -74,6 +75,8 @@ public class GumballMachine implements IGumballMachine{
         if (count != 0) {
             count = count - 1;
         }
+        if(getChange() > 0)
+        System.out.println("Please take the change: " + getChange());
     }
  
     int getCount() {
@@ -125,5 +128,16 @@ public class GumballMachine implements IGumballMachine{
         result.append("\n");
         result.append("Machine is " + state + "\n");
         return result.toString();
+    }
+    
+    //Added to get the return change if any
+     public int getChange()
+    {
+        return change;
+    }
+    
+    public void setChange(int change)
+    {
+        this.change=change;
     }
 }

@@ -2,9 +2,10 @@
 
 public class NoFiftyCentsState implements State {
     GumballMachine gumballMachine;
- 
+   
     public NoFiftyCentsState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
+        
     }
  
     public void insertQuarter() {
@@ -12,8 +13,16 @@ public class NoFiftyCentsState implements State {
         gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() + 25);
         if(gumballMachine.getTotalCoinValue()==50)
            gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           else if (gumballMachine.getTotalCoinValue()>50)
+           {
+           gumballMachine.setState(gumballMachine.getHasFiftyCentsState());
+           gumballMachine.setChange(gumballMachine.getTotalCoinValue()-50);
+           System.out.println("Please turn the crank. GumballMachine has more than 50 cents");
+           }
     }
  
+   
+    
     public void ejectQuarter() {
         System.out.println("You haven't inserted a quarter");
     }
@@ -42,6 +51,7 @@ public class NoFiftyCentsState implements State {
  
     public void turnCrank() {
         System.out.println("You turned, but there's no quarter");
+        
      }
  
     public void dispense() {

@@ -191,7 +191,44 @@ public class GumballMachineTest
     }
     
    
+
+    @Test
+    public void testFiftyPlusFirst()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertNickel();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+    }
+
+    
+
+    @Test
+    public void testFiftyPlusSecond()
+    {
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.insertDime();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+    }
+
+    @Test
+    public void testFinalCoinValue()
+    {
+        gumballM1.insertQuarter();
+        gumballM1.insertQuarter();
+        gumballM1.turnCrank();
+        assertEquals(true, gumballM1.isGumballInSlot());
+        assertEquals(0, gumballM1.getTotalCoinValue());
+    }
 }
+
+
+
+
 
 
 
