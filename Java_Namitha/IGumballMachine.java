@@ -1,10 +1,4 @@
 
-/**
- * Write a description of interface IGumballMachine here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public interface IGumballMachine
 {
     void insertQuarter( ) ;
@@ -13,5 +7,5 @@ public interface IGumballMachine
     void turnCrank( ) ;
     boolean isGumballInSlot( ) ;
     void takeGumballFromSlot( ) ;
-
+   
 }

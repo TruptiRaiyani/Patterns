@@ -9,31 +9,46 @@ public class HasFiftyCentsState implements State {
 		this.gumballMachine = gumballMachine;
 	}
   
-	public void insertDime() {
-		System.out.println("You can't insert another dime");
-	}
-	
-	public void insertNickel() {
-		System.out.println("You can't insert another nickel");
-	}
-	
 	public void insertQuarter() {
 		System.out.println("You can't insert another quarter");
-	}
+		gumballMachine.setChange(gumballMachine.getChange()+25);
+		System.out.println("Please turn the crank.");
+           }
  
 	public void ejectQuarter() {
-		System.out.println("Quarter returned");
+		System.out.println("Please collect ejected quarter.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 25);
 		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
 	}
  
-	public void ejectDime() {
-		System.out.println("You haven't inserted a dime");
-	}
+	//******Lab2Changes***********
+	public void insertDime() {
+	   System.out.println("You can't insert another dime");
+	   gumballMachine.setChange(gumballMachine.getChange()+10);
+	   System.out.println("Please turn the crank.");
+           
+           }
+	   	   
+	public void ejectDime(){
+	     System.out.println("Please collect ejected dime.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 10);
+		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
+	   }
+    public void insertNickel( ) 
+    {
+     System.out.println("You can't insert another nickel");
+      gumballMachine.setChange(gumballMachine.getChange()+5);
+      System.out.println("Please turn the crank. ");
+        
+    }
+    
+	public void ejectNickel(){
+	   System.out.println("Please collect ejected nickel.");
+		gumballMachine.setTotalCoinValue(gumballMachine.getTotalCoinValue() - 5);
+		gumballMachine.setState(gumballMachine.getNoFiftyCentsState());
+	   }
 	
-	public void ejectNickel() {
-		System.out.println("You haven't inserted a nickel");
-	}
-	
+	//*****End Lab2Changes*********
 	public void turnCrank() {
 		System.out.println("You turned...");
 		gumballMachine.setState(gumballMachine.getSoldState());

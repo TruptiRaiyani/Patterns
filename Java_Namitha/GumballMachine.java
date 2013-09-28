@@ -1,92 +1,137 @@
 
 
-public class GumballMachine implements IGumballMachine {
+public class GumballMachine implements IGumballMachine{
  
     State soldOutState;
     State noFiftyCentsState;
     State hasFiftyCentsState;
     State soldState;
- 
+    
     State state = soldOutState;
-    int count = 0;
-    int gumballInSlot = 0;
- 
+    private static int count = 0;
+    private boolean is_gumball_in_slot;
+    private int totalGumballsInSlot;
+    int totalCoinValue = 0;
+    private int change;
+    
     public GumballMachine(int numberGumballs) {
         soldOutState = new SoldOutState(this);
         noFiftyCentsState = new NoFiftyCentsState(this);
         hasFiftyCentsState = new HasFiftyCentsState(this);
         soldState = new SoldState(this);
-
         this.count = numberGumballs;
+        this.is_gumball_in_slot = false;
+        this.totalCoinValue = 0;
+        this.change=0;//
+        this.totalGumballsInSlot = 0;
         if (numberGumballs > 0) {
             state = noFiftyCentsState;
         } 
+        else {
+            state = soldOutState;
+        }
     }
  
-    //Before inserting any coin, check whether slot already has any gumball 
-    public boolean isGumballInSlot( ) {
-        if(gumballInSlot == 1) {
-            System.out.println("Gumball is in the slot");
-            return true;
-        }
-        System.out.println("No gumball in the slot");
-        return false;
-    }
-    
     public void insertQuarter() {
         state.insertQuarter();
-    }
-    
-    //New method to insert dime
-    public void insertDime() {
-        state.insertDime();
-    }
-    
-    //New method to insert nickel
-    public void insertNickel() {
-        state.insertNickel();
     }
  
     public void ejectQuarter() {
         state.ejectQuarter();
     }
  
-    
     public void turnCrank() {
         state.turnCrank();
         state.dispense();
     }
-
     
+    //**********Lab2 changes********
+    public void insertDime( ) {
+    state.insertDime();
+    };
+    public void insertNickel( ) {
+        state.insertNickel();
+    };
+    
+     public void ejectDime() {
+        state.ejectDime();
+    }
+    
+    public void ejectNickel(){
+        state.ejectNickel();
+    }
+    
+    public boolean isGumballInSlot( ) {
+        if(is_gumball_in_slot) {
+            System.out.println(totalGumballsInSlot + " gumball(s) in slot...");
+        }
+        else {
+            System.out.println("No Gumball in slot!!!");
+        }
+        return is_gumball_in_slot;
+    }
+    public void takeGumballFromSlot( ) {
+        if(is_gumball_in_slot == true)
+        {
+            System.out.println("You took " + totalGumballsInSlot + " gumball(s) from slot...");
+            totalGumballsInSlot = 0;
+            is_gumball_in_slot = false;
+        }
+    };
+    //**********End Lab2 changes********
+        
+
     void setState(State state) {
         this.state = state;
     }
  
-    void releaseBall() {
-        System.out.println("A gumball comes  rolling out the slot...");
-        if (count != 0) {
+    void releaseBall() 
+    {
+        if (totalCoinValue == 50){
+          if (count != 0) 
+          {
             count = count - 1;
-            gumballInSlot = 1; //Means Gumball is present in slot
+            totalGumballsInSlot = totalGumballsInSlot + 1;
+            System.out.println("A gumball comes rolling out the slot...");
+            is_gumball_in_slot = true;   
+            setTotalCoinValue(0);
+            System.out.println("Remaining number of gumballs in machine :" +count);
+         }
+        
+        if(getChange() > 0)
+        {
+          System.out.println("Please take the change: " + getChange()+ "cents");
+          setChange(0);
         }
+  
+    }
+    else
+    {
+        System.out.println("Please insert fifty cents to buy gumball");
+    }
+   
     }
  
-    //After cranking, take gumball from slot
-    public void takeGumballFromSlot( ) {
-        if(isGumballInSlot())
-        {
-            System.out.println("Please take gumball from slot...");
-            gumballInSlot = 0;
-        }
-        
-    }
-    
     int getCount() {
         return count;
     }
+    
+    public void setCount(int count) {
+        this.count = count;
+    }
  
     void refill(int count) {
-        this.count = count;
+        if((this.count + count)<=100)
+        {
+        this.count = this.count + count;
         state = noFiftyCentsState;
+        }
+        else
+        {
+            int maxallowed = 100 - this.count;
+            System.out.println("Maximum gumballs stored in this gumballmachine can be 100. You can add "
+            + maxallowed + " more gumballs");
+        }
     }
 
     public State getState() {
@@ -108,6 +153,20 @@ public class GumballMachine implements IGumballMachine {
     public State getSoldState() {
         return soldState;
     }
+    
+    public void setTotalCoinValue(int value ){
+        totalCoinValue = value;
+    }
+    
+    public int getTotalCoinValue()
+    {
+        return totalCoinValue;
+    }
+    
+    public int getTotalGumballsInSlot()
+    {
+        return this.totalGumballsInSlot;
+    }
  
     public String toString() {
         StringBuffer result = new StringBuffer();
@@ -120,6 +179,17 @@ public class GumballMachine implements IGumballMachine {
         result.append("\n");
         result.append("Machine is " + state + "\n");
         return result.toString();
+    }
+    
+    //Added to get the return change if any
+     public int getChange()
+    {
+        return change;
+    }
+    
+    public void setChange(int change)
+    {
+        this.change=change;
     }
     
     
