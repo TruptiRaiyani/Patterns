@@ -96,30 +96,14 @@ public class GumballMachineTest
     
 
     @Test
-    public void testNoFiftyCentsToHasFiftyCentsStateTransition()
-    {
+    public void testNoFiftyCentsToHasFiftyCentsStateTransition(){
+    
+        System.out.println("NoFiftyCentsState");
         gumballM1.insertQuarter();
         gumballM1.insertQuarter();
-        boolean isHasFiftyCentsState = false;
-        if (gumballM1.getState() instanceof HasFiftyCentsState)
-            isHasFiftyCentsState = true;
-        
-        assertEquals(true, isHasFiftyCentsState);
+        assertEquals(true, gumballM1.getState() instanceof HasFiftyCentsState);
+        System.out.println("HasFiftyCentsState");
     }
-    
-   /* @Test
-    public void testHasFiftyCentsToSoldState()
-    {
-        gumballM1.insertQuarter();
-        gumballM1.insertQuarter();
-        gumballM1.turnCrank();
-        boolean isSoldState = false;
-        if (gumballM1.getState() instanceof SoldState)
-            isSoldState = true;
-        
-        assertEquals(true, isSoldState);
-    
-    }*/
     
     //Checking whether the machine slot already has a gumball in the beginning
     @Test
