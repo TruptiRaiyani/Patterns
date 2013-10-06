@@ -27,5 +27,8 @@ public class Farm extends World
       
       Hen hen = new Hen();
       addObject(hen, 400, 78);
+      
+      Basket basket = new Basket();
+      addObject(basket,400,400);
     }
 }
