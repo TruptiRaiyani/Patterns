@@ -19,6 +19,31 @@ public class WhiteEgg extends Egg
      */
     public void act() 
     {
+        Hen hen=new Hen();
+        //Greenfoot.delay(3);
+        setRotation(90);
+        move(3);
+        if(isTouching(Basket.class) || atWorldEdgeWhiteEgg())
+        {
+            World world ;
+            world = getWorld();
+            world.removeObject(this);  
+            
+        }
+   //
+        
+    }
+     private boolean atWorldEdgeWhiteEgg()  
+    {  
+        if(getX() < 10 || getX() > getWorld().getWidth() - 10)  
+            return true;  
+        if(getY() < 10 || getY() > getWorld().getHeight() - 10)  
+            return true;  
+        else  
+            return false;  
+    }  
+    
+    
         /*if(getRotation()!=90)
             {
                 System.out.println("Rotation not 90");
@@ -27,4 +52,4 @@ public class WhiteEgg extends Egg
             }
         move(4);*/
     }    
-}
+

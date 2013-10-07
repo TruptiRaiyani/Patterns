@@ -20,11 +20,11 @@ public class Basket extends Actor
     public void act() 
     {
            int mouseX, mouseY;
-           mouseY = 420;
-           MouseInfo mouse = Greenfoot.getMouseInfo(); 
+           if(Greenfoot.mouseDragged(this)) {          
+            MouseInfo mouse = Greenfoot.getMouseInfo();  
             mouseX=mouse.getX();  
-            //mouseY=mouse.getY();  
-            setLocation(mouseX, mouseY); 
-
+            mouseY=420;
+            setLocation(mouseX, mouseY);            
+        }  
     }    
 }
