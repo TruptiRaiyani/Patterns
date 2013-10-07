@@ -31,7 +31,7 @@ public class Hen extends Actor
             move(4);
         }
         
-        if( Greenfoot.getRandomNumber(2)==0)
+        if( Greenfoot.getRandomNumber(40) == 0)
         {
             
             WhiteEgg egg=new WhiteEgg();       
