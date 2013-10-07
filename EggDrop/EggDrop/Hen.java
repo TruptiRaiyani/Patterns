@@ -30,6 +30,13 @@ public class Hen extends Actor
             getImage().mirrorVertically();
             move(4);
         }
+        
+        if( Greenfoot.getRandomNumber(2)==0)
+        {
+           // WhiteEgg egg = new WhiteEgg();
+            //getWorld().addObject(egg, getX(), 188);
+            //egg.move(4);
+        }
     }  
     
     private boolean atWorldEdge()  

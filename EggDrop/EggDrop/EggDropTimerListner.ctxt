@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=EggDropTimerListner()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ EggDropTimer\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=y
+comment2.target=int\ sampleMethod(int)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+numComments=3

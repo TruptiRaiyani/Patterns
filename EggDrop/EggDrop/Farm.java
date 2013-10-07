@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Farm extends World
 {
-
+    private WoodenPlank woodenplank ;
+    private Hen hen;
+    private Basket basket;
+    
     /**
      * Constructor for objects of class Farm.
      * 
@@ -22,13 +25,28 @@ public class Farm extends World
     
     void addObjectsToFarm()
     {
-      WoodenPlank woodenplank = new WoodenPlank();
+      woodenplank = new WoodenPlank();
       addObject(woodenplank, 400, 150);
       
-      Hen hen = new Hen();
+      hen = new Hen();
       addObject(hen, 400, 78);
       
-      Basket basket = new Basket();
-      addObject(basket,400,400);
+      basket = new Basket();
+      addObject(basket,400,420);
+    }
+    
+    public Hen getHen()
+    {
+        return hen;
+    }
+    
+    public Basket getBasket()
+    {
+        return basket;
+    }
+    
+    public WoodenPlank getWoodenPlank()
+    {
+        return woodenplank;
     }
 }
