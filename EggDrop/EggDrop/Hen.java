@@ -35,7 +35,7 @@ public class Hen extends Actor
         {
             
             WhiteEgg egg=new WhiteEgg();       
-            getWorld().addObject(egg, this.getX(), this.getY());
+            getWorld().addObject(egg, this.getX(), this.getY()+45);
            
         }
     }  
