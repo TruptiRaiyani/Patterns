@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Oct 07 00:14:23 PDT 2013
+#Mon Oct 07 14:08:02 PDT 2013
 target2.width=160
 target8.name=Basket
 target5.naviview.expanded=true
@@ -47,6 +47,7 @@ target9.name=Hen
 target5.height=50
 target8.naviview.expanded=true
 target7.editor.width=900
+class.EggBreak.image=egg-break.gif
 target2.type=ClassTarget
 target4.editor.y=42
 class.EggBreak.superclass=Egg

@@ -49,4 +49,14 @@ public class Farm extends World
     {
         return woodenplank;
     }
+    
+    public boolean atWorldEdge(Actor me)  
+    {  
+        if(me.getX() < 10 || me.getX() > getWidth() - 10)  
+            return true;  
+        if(me.getY() < 10 || me.getY() > getHeight() - 25)  
+            return true;  
+        else  
+            return false;  
+    }  
 }

@@ -24,14 +24,14 @@ public class Hen extends Actor
         // Add your action code here.
         move(4);
         int random = Greenfoot.getRandomNumber(5000);
-        if((random>200 & random<300) || atWorldEdge())
+        if((random>200 & random<300) || ((Farm)getWorld()).atWorldEdge(this))
         {
             turn(180);
             getImage().mirrorVertically();
             move(4);
         }
         
-        if( Greenfoot.getRandomNumber(40) == 0)
+        if( Greenfoot.getRandomNumber(100) ==0)
         {
             
             WhiteEgg egg=new WhiteEgg();       
@@ -40,13 +40,5 @@ public class Hen extends Actor
         }
     }  
     
-    private boolean atWorldEdge()  
-    {  
-        if(getX() < 10 || getX() > getWorld().getWidth() - 10)  
-            return true;  
-        if(getY() < 10 || getY() > getWorld().getHeight() - 10)  
-            return true;  
-        else  
-            return false;  
-    }  
+    
 }

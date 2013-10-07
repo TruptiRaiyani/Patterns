@@ -10,7 +10,7 @@ public class WhiteEgg extends Egg
 {
     public WhiteEgg(){
         GreenfootImage image = getImage() ;
-        image.scale( 20, 35 ) ;
+        image.scale( 35, 20 ) ;
        
     }
     /**
@@ -19,37 +19,30 @@ public class WhiteEgg extends Egg
      */
     public void act() 
     {
-        Hen hen=new Hen();
-        //Greenfoot.delay(3);
+        //Hen hen=new Hen();
+        Farm farm =  (Farm)getWorld();
+        int yOfBasket = farm.getBasket().getY();
+        int xOfBasket = farm.getBasket().getX();
         setRotation(90);
         move(3);
-        if(isTouching(Basket.class) || atWorldEdgeWhiteEgg())
+        if(isTouching(Basket.class) && (yOfBasket==getY()))
         {
             World world ;
             world = getWorld();
             world.removeObject(this);  
             
         }
-   //
+        else if(((Farm)getWorld()).atWorldEdge(this))
+        {
+            
+            setImage("egg-break.gif");
+            getImage().scale( 50,50) ;
+            setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
+            //TODO code to make egg dissapear.
+        }
         
     }
-     private boolean atWorldEdgeWhiteEgg()  
-    {  
-        if(getX() < 10 || getX() > getWorld().getWidth() - 10)  
-            return true;  
-        if(getY() < 10 || getY() > getWorld().getHeight() - 10)  
-            return true;  
-        else  
-            return false;  
-    }  
     
-    
-        /*if(getRotation()!=90)
-            {
-                System.out.println("Rotation not 90");
-                setRotation(90);
-                getImage().
-            }
-        move(4);*/
+
     }    
 
