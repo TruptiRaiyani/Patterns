@@ -14,6 +14,24 @@ public class Egg extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+       Farm farm =  (Farm)getWorld();
+        int yOfBasket = farm.getBasket().getY();
+        int xOfBasket = farm.getBasket().getX();
+        setRotation(90);
+        move(3);
+        if(isTouching(Basket.class) && (yOfBasket==getY()))
+        {
+            World world ;
+            world = getWorld();
+            world.removeObject(this);  
+            
+        }
+        else if(((Farm)getWorld()).atWorldEdge(this))
+        {
+            
+            setImage("egg-break.gif");
+            getImage().scale( 50,50) ;
+            setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
     }    
+}
 }

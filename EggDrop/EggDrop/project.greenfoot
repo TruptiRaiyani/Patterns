@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Oct 08 14:51:17 PDT 2013
+#Tue Oct 08 15:12:09 PDT 2013
 target2.width=160
 target8.name=Basket
 target5.naviview.expanded=true
@@ -51,7 +51,6 @@ target8.naviview.expanded=true
 target7.editor.width=900
 target2.type=ClassTarget
 target4.editor.y=42
-class.EggBreak.superclass=Egg
 dependency1.to=WoodenPlank
 target4.editor.x=40
 dependency3.type=UsesDependency
@@ -88,6 +87,7 @@ target9.y=70
 target9.x=70
 target3.type=ClassTarget
 target6.height=50
+class.GoldenEgg.image=golden_egg.gif
 target3.editor.width=900
 target7.y=190
 target7.x=10
