@@ -11,7 +11,7 @@ public class WoodenPlank extends Actor
     public WoodenPlank()
     {
         GreenfootImage image = getImage() ;
-        image.scale( 800, 50 ) ; 
+        image.scale( 800, 40 ) ; 
     }
     /**
      * Act - do whatever the WoodenPlank wants to do. This method is called whenever

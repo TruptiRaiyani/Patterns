@@ -26,7 +26,7 @@ public class Farm extends World
     void addObjectsToFarm()
     {
       woodenplank = new WoodenPlank();
-      addObject(woodenplank, 400, 150);
+      addObject(woodenplank, 400, 145);
       
       hen = new Hen();
       addObject(hen, 400, 78);
