@@ -11,7 +11,7 @@ public class Basket extends Actor
     public Basket()
     {
         GreenfootImage image = getImage() ;
-        image.scale( 100, 100 ) ; 
+        image.scale( 80, 80 ) ; 
     }
     /**
      * Act - do whatever the Basket wants to do. This method is called whenever
@@ -20,11 +20,12 @@ public class Basket extends Actor
     public void act() 
     {
            int mouseX, mouseY;
-           //if(Greenfoot.mouseDragged(this)) {          
-            MouseInfo mouse = Greenfoot.getMouseInfo();  
-            mouseX=mouse.getX();  
-            mouseY=420;
-            setLocation(mouseX, mouseY);            
-      //  }  
+           MouseInfo mouse = Greenfoot.getMouseInfo();  
+            if(mouse!=null)
+            {
+                mouseX=mouse.getX();  
+                mouseY=480;
+                setLocation(mouseX, mouseY);        
+        } 
     }    
 }

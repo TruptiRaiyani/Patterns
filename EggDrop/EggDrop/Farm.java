@@ -19,7 +19,7 @@ public class Farm extends World
     public Farm()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 500, 1); 
+        super(800, 550, 1); 
        addObjectsToFarm();
     }
     
@@ -32,7 +32,7 @@ public class Farm extends World
       addObject(hen, 400, 78);
       
       basket = new Basket();
-      addObject(basket,400,420);
+      addObject(basket,400,480);
     }
     
     public Hen getHen()
