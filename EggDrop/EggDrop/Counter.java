@@ -1,6 +1,7 @@
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.*;
 import java.awt.Color;
+import java.awt.Graphics;
 
 
 public class Counter extends Actor
@@ -89,15 +90,16 @@ public class Counter extends Actor
         GreenfootImage image = new GreenfootImage(background);
         //GreenfootImage image = getImage() ;
         image.scale( 180, 42 ) ;
-        GreenfootImage text = new GreenfootImage(prefix + value, 22, Color.BLACK, transparent);
+        
+        GreenfootImage text = new GreenfootImage(prefix + value, 22, Color.WHITE, transparent);
         
         if (text.getWidth() > image.getWidth() - 20)
         {
             image.scale(text.getWidth() + 20, image.getHeight());
         }
-        
+        image.setFont( new Font("Arial", Font.BOLD, 24 ));
         image.drawImage(text, (image.getWidth()-text.getWidth())/2, 
-                        (image.getHeight()-text.getHeight())/2);
+                       (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
 }
