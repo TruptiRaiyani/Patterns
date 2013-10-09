@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Oct 08 23:42:47 PDT 2013
+#Wed Oct 09 00:51:21 PDT 2013
 target2.width=110
 target8.name=Basket
 target5.naviview.expanded=true
@@ -55,9 +55,9 @@ target8.naviview.expanded=true
 dependency13.type=UsesDependency
 target7.editor.width=900
 target2.type=ClassTarget
-target4.editor.y=65
+target4.editor.y=75
 dependency1.to=WoodenPlank
-target4.editor.x=487
+target4.editor.x=192
 dependency3.type=UsesDependency
 target2.height=50
 target6.type=ClassTarget
