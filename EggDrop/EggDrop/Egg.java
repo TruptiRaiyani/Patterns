@@ -19,10 +19,11 @@ public class Egg extends Actor
         int xOfBasket = farm.getBasket().getX();
         setRotation(90);
         move(3);
+         World world ;
+         world = getWorld();
         if(isTouching(Basket.class) && (yOfBasket==getY()))
         {
-            World world ;
-            world = getWorld();
+           
             world.removeObject(this);  
             
         }
@@ -32,6 +33,9 @@ public class Egg extends Actor
             setImage("egg-break.gif");
             getImage().scale( 50,50) ;
             setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
+            if(Greenfoot.getRandomNumber(50) == 0) {
+                world.removeObject(this);
+            }
     }    
 }
 }
