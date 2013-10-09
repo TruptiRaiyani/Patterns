@@ -16,7 +16,7 @@ public abstract class Egg extends Actor
      */
     
     GreenfootSound sound = new GreenfootSound("Egg Crack.wav"); 
-    
+     public static int lifecounter;
     
     public void act() 
     {
@@ -45,6 +45,8 @@ public abstract class Egg extends Actor
             getImage().scale( 50,50) ;
             setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
             if(Greenfoot.getRandomNumber(50) == 0) {
+                lifecounter++;
+                farm.removeLife(lifecounter);
                 world.removeObject(this);
             }
     }
