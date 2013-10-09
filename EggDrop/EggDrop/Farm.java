@@ -11,6 +11,8 @@ public class Farm extends World
     private WoodenPlank woodenplank ;
     private Hen hen;
     private Basket basket;
+    private Egg egg;
+    public static Counter c = new Counter();
     
     /**
      * Constructor for objects of class Farm.
@@ -20,13 +22,14 @@ public class Farm extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 550, 1); 
-       addObjectsToFarm();  
-      
+       addObjectsToFarm();
     }
-    
     
     void addObjectsToFarm()
     {
+        addObject(c, 50, 34);
+        c.setLocation(49, 16);
+        
       woodenplank = new WoodenPlank();
       addObject(woodenplank, 400, 145);
       
@@ -35,6 +38,8 @@ public class Farm extends World
       
       basket = new Basket();
       addObject(basket,400,480);
+      
+     
     }
     
     public Hen getHen()
@@ -61,14 +66,4 @@ public class Farm extends World
         else  
             return false;  
     }  
-    
-    GreenfootSound sound = new GreenfootSound("Hen Final.wav"); 
-    public void started(){
-       
-        sound.playLoop();
-    }
-    
-    public void stopped(){
-       sound.setVolume(0);
-    }
 }
