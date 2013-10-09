@@ -18,9 +18,35 @@ public abstract class Egg extends Actor
     GreenfootSound sound = new GreenfootSound("Egg Crack.wav"); 
     public void act() 
     {
-      actEgg();
+         Farm farm =  (Farm)getWorld();
+        int yOfBasket = farm.getBasket().getY();
+        int xOfBasket = farm.getBasket().getX();
+        
+        setRotation(90);
+        move(3);
+         World world ;
+         world = getWorld();
+    
+        if(isTouching(Basket.class) && (yOfBasket==getY()) )
+        {
+            
+            countEgg();
+            world.removeObject(this);   
+             
+        } 
+        else if(((Farm)getWorld()).atWorldEdge(this))
+        {
+            
+            setImage("egg-break.gif");
+            getImage().scale( 50,50) ;
+            setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
+            if(Greenfoot.getRandomNumber(50) == 0) {
+                world.removeObject(this);
+            }
+    }
+      
    }
    
-    public abstract void actEgg();
+    public abstract void countEgg();
 
 }

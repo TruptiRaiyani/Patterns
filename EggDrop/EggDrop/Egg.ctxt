@@ -2,5 +2,5 @@
 comment0.params=
 comment0.target=void\ act()
 comment1.params=
-comment1.target=void\ actEgg()
+comment1.target=void\ countEgg()
 numComments=2
