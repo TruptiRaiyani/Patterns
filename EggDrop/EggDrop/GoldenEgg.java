@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GoldenEgg extends Egg
 {
-    
+     GreenfootSound bingo = new GreenfootSound("bingo1.wav");
+     
     public GoldenEgg(){
           GreenfootImage image = getImage() ;
         image.scale( 35, 20 ) ;
@@ -20,13 +21,14 @@ public class GoldenEgg extends Egg
     public void act() 
     {
          super.act();
+        
     } 
     
     public void countEgg()
     {
+        
         Farm.c.add(10);
-    
-  
+         bingo.play();
     
     }
 }
