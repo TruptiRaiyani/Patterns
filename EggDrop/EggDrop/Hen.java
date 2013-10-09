@@ -13,7 +13,9 @@ public class Hen extends Actor
     {
         GreenfootImage image = getImage() ;
         image.scale( 80, 120) ; 
-        getImage().mirrorHorizontally();
+        getImage().mirrorHorizontally();  
+        GreenfootSound sound = new GreenfootSound("Hen Final.wav");
+         sound.playLoop();
     }
     /**
      * Act - do whatever the Chicken wants to do. This method is called whenever
@@ -23,6 +25,7 @@ public class Hen extends Actor
     {
         // Add your action code here.
         move(4);
+         
         int random = Greenfoot.getRandomNumber(5000);
         if((random>200 & random<300) || ((Farm)getWorld()).atWorldEdge(this))
         {
