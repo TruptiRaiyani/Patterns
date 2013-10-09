@@ -32,6 +32,11 @@ public class BlackEgg extends Egg
             boing.play();
     }
     
+    public void removeLifeForWhiteAndGold(){
+      
+     //do nothing
+    }
+    
   }    
 
 

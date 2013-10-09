@@ -30,6 +30,13 @@ public class WhiteEgg extends Egg
             
     }
     
+    public void removeLifeForWhiteAndGold(){
+        Farm farm =  (Farm)getWorld();
+      lifecounter++;
+      farm.removeLife(lifecounter);
+
+    }
+    
   }    
 
 

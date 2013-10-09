@@ -31,5 +31,12 @@ public class GoldenEgg extends Egg
          bingo.play();
     
     }
+    
+    public void removeLifeForWhiteAndGold(){
+        Farm farm =  (Farm)getWorld();
+      lifecounter++;
+      farm.removeLife(lifecounter);
+
+    }
 }
 

@@ -45,8 +45,9 @@ public abstract class Egg extends Actor
             getImage().scale( 50,50) ;
             setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
             if(Greenfoot.getRandomNumber(50) == 0) {
-                lifecounter++;
-                farm.removeLife(lifecounter);
+                //lifecounter++;
+                //farm.removeLife(lifecounter);
+                removeLifeForWhiteAndGold();
                 world.removeObject(this);
             }
     }
@@ -54,5 +55,6 @@ public abstract class Egg extends Actor
    }
    
     public abstract void countEgg();
+    public abstract void removeLifeForWhiteAndGold();
 
 }
