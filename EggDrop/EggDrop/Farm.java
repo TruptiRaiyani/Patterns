@@ -66,4 +66,14 @@ public class Farm extends World
         else  
             return false;  
     }  
+    
+    GreenfootSound sound = new GreenfootSound("Hen Final.wav"); 
+    public void started(){
+       
+        sound.playLoop();
+    }
+    
+    public void stopped(){
+       sound.setVolume(0);
+    }
 }
