@@ -24,10 +24,9 @@ public class GoldenEgg extends Egg
         
     } 
     
-    public void countEgg()
+    public void updateScore()
     {
-        
-        Farm.c.add(10);
+        ((Farm)getWorld()).getCounter().updateScore(10);
          bingo.play();
     
     }

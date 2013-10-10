@@ -32,7 +32,7 @@ public abstract class Egg extends Actor
         if(isTouching(Basket.class) && (yOfBasket==getY()) )
         {
             
-            countEgg();
+            updateScore();
             world.removeObject(this);   
           
              
@@ -54,7 +54,7 @@ public abstract class Egg extends Actor
       
    }
    
-    public abstract void countEgg();
+    public abstract void updateScore();
     public abstract void removeLifeForWhiteAndGold();
 
 }

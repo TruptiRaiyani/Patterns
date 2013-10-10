@@ -12,8 +12,8 @@ public class Farm extends World
     private Hen hen;
     private Basket basket;
     private Egg egg;
-    public static Counter c = new Counter();
-     private Life life1,life2,life3;
+    private Counter counter;
+    private Life life1,life2,life3;
     public static int lifecounter;
     /**
      * Constructor for objects of class Farm.
@@ -21,15 +21,16 @@ public class Farm extends World
      */
     public Farm()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 550, 1); 
+        // Create a new world with 600x550 cells with a cell size of 1x1 pixels.
+       super(800, 550, 1); 
        addObjectsToFarm();
     }
     
     void addObjectsToFarm()
     {
-        addObject(c, 50, 34);
-        c.setLocation(49, 16);
+      counter = new Counter();
+      addObject(counter, 50, 15);
+      //c.setLocation(49, 16);
         
       woodenplank = new WoodenPlank();
       addObject(woodenplank, 400, 145);
@@ -64,6 +65,10 @@ public class Farm extends World
         return woodenplank;
     }
     
+    public Counter getCounter()
+    {
+        return counter;
+    }
     public boolean atWorldEdge(Actor me)  
     {  
         if(me.getX() < 10 || me.getX() > getWidth() - 10)  

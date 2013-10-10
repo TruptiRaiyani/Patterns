@@ -25,10 +25,9 @@ public class BlackEgg extends Egg
         
     }
     
-   public void countEgg()
+   public void updateScore()
     {
-        
-            Farm.c.add(-10);
+        ((Farm)getWorld()).getCounter().updateScore(-10);
             boing.play();
     }
     
