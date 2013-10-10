@@ -15,7 +15,7 @@ public abstract class Egg extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootSound sound = new GreenfootSound("Egg Crack.wav"); 
+    GreenfootSound sound = new GreenfootSound("egg_crack.mp3"); 
      public static int lifecounter;
     
     public void act() 
