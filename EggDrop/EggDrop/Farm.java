@@ -13,6 +13,7 @@ public class Farm extends World
     private Basket basket;
     private Egg egg;
     private Counter counter;
+    private timer timer;
     private Life life1,life2,life3;
     public static int lifecounter;
     /**
@@ -47,7 +48,8 @@ public class Farm extends World
       addObject(life2,730,10);
       life3 = new Life();
       addObject(life3,770,10);
-     
+      timer = new timer();
+      addObject(timer, 450, 15);
     }
     
     public Hen getHen()
