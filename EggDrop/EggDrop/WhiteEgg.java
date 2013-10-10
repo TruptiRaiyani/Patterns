@@ -23,15 +23,13 @@ public class WhiteEgg extends Egg
         
     }
     
-   public void countEgg()
+   public void updateScore()
     {
-        
-            Farm.c.add(1);
-            
+       ((Farm)getWorld()).getCounter().updateScore(1);
     }
     
     public void removeLifeForWhiteAndGold(){
-        Farm farm =  (Farm)getWorld();
+      Farm farm =  (Farm)getWorld();
       lifecounter++;
       farm.removeLife(lifecounter);
 

@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment1.params=
-comment1.target=int\ GetScore()
-comment2.params=score
-comment2.target=void\ SetScore(int)
-numComments=3

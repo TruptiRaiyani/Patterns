@@ -15,7 +15,7 @@ public abstract class Egg extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootSound sound = new GreenfootSound("Egg Crack.wav"); 
+    GreenfootSound sound = new GreenfootSound("egg_crack.wav"); 
      public static int lifecounter;
     
     public void act() 
@@ -32,10 +32,9 @@ public abstract class Egg extends Actor
         if(isTouching(Basket.class) && (yOfBasket==getY()) )
         {
             
-            countEgg();
+            updateScore();
             world.removeObject(this);   
-          
-             
+            
         } 
         else if(((Farm)getWorld()).atWorldEdge(this))
         {
@@ -54,7 +53,7 @@ public abstract class Egg extends Actor
       
    }
    
-    public abstract void countEgg();
+    public abstract void updateScore();
     public abstract void removeLifeForWhiteAndGold();
 
 }

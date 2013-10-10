@@ -24,16 +24,15 @@ public class GoldenEgg extends Egg
         
     } 
     
-    public void countEgg()
+    public void updateScore()
     {
-        
-        Farm.c.add(10);
+        ((Farm)getWorld()).getCounter().updateScore(10);
          bingo.play();
     
     }
     
     public void removeLifeForWhiteAndGold(){
-        Farm farm =  (Farm)getWorld();
+      Farm farm =  (Farm)getWorld();
       lifecounter++;
       farm.removeLife(lifecounter);
 
