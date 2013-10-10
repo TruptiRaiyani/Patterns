@@ -32,7 +32,7 @@ public class GoldenEgg extends Egg
     }
     
     public void removeLifeForWhiteAndGold(){
-        Farm farm =  (Farm)getWorld();
+      Farm farm =  (Farm)getWorld();
       lifecounter++;
       farm.removeLife(lifecounter);
 

@@ -16,7 +16,7 @@ public class Counter extends Actor
         prefix = "Score: ";
         getImage().setFont(new Font("Comic", Font.BOLD, 24 ));
         getImage().setColor(Color.red);
-        getImage().drawString(prefix +" : " + target, 50, 60);
+        getImage().drawString(prefix +"" + target, 50, 60);
         
     }
     
@@ -24,7 +24,7 @@ public class Counter extends Actor
     {
         target += addCount;
         getImage().clear();
-        getImage().drawString(prefix +" : " + target, 50, 60);
+        getImage().drawString(prefix +"" + target, 50, 60);
     }
     
     

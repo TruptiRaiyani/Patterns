@@ -34,8 +34,7 @@ public abstract class Egg extends Actor
             
             updateScore();
             world.removeObject(this);   
-          
-             
+            
         } 
         else if(((Farm)getWorld()).atWorldEdge(this))
         {
