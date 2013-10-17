@@ -106,6 +106,7 @@ public class Farm extends World
         else if(lifecounter >= 3)
         {
             removeObject(life3);
+            addObject(new GameOver(),getWidth()/2, getHeight()/2);
             life3.endgame();
            // lifecounter=0;//reset
         }
