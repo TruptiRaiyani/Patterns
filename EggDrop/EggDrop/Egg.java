@@ -43,6 +43,7 @@ public abstract class Egg extends Actor
             sound.play();
             getImage().scale( 50,50) ;
             setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
+            
             if(Greenfoot.getRandomNumber(50) == 0) {
                 //lifecounter++;
                 //farm.removeLife(lifecounter);
