@@ -1,4 +1,7 @@
 #Greenfoot project file
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 class.Basket.image=basket.gif
 class.Basket.superclass=greenfoot.Actor
 class.BlackEgg.image=BlackEgg.gif
@@ -13,10 +16,7 @@ class.GoldenEgg.image=golden_egg.gif
 class.GoldenEgg.superclass=Egg
 class.Hen.image=Hen2.png
 class.Hen.superclass=greenfoot.Actor
-<<<<<<< HEAD
-=======
 class.Life.image=herz.png
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 class.Life.superclass=greenfoot.Actor
 class.ScoreBoard.image=scoreboard.jpg
 class.ScoreBoard.superclass=greenfoot.Actor
@@ -24,10 +24,7 @@ class.WhiteEgg.image=white_egg.gif
 class.WhiteEgg.superclass=Egg
 class.WoodenPlank.image=woodenplank.png
 class.WoodenPlank.superclass=greenfoot.Actor
-<<<<<<< HEAD
-=======
 class.timer.superclass=greenfoot.Actor
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 dependency1.from=Farm
 dependency1.to=WoodenPlank
 dependency1.type=UsesDependency
@@ -88,15 +85,12 @@ dependency26.type=UsesDependency
 dependency27.from=Hen
 dependency27.to=BlackEgg
 dependency27.type=UsesDependency
-<<<<<<< HEAD
-=======
 dependency28.from=Farm
 dependency28.to=Life
 dependency28.type=UsesDependency
 dependency29.from=Farm
 dependency29.to=timer
 dependency29.type=UsesDependency
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 dependency3.from=Farm
 dependency3.to=Basket
 dependency3.type=UsesDependency
@@ -118,19 +112,11 @@ dependency8.type=UsesDependency
 dependency9.from=Hen
 dependency9.to=Farm
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-mainWindow.height=761
-mainWindow.width=1343
-mainWindow.x=97
-mainWindow.y=22
-package.numDependencies=27
-=======
 mainWindow.height=744
 mainWindow.width=1382
-mainWindow.x=-13
-mainWindow.y=0
+mainWindow.x=0
+mainWindow.y=22
 package.numDependencies=29
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 package.numTargets=12
 project.charset=UTF-8
 simulation.speed=52
@@ -146,45 +132,17 @@ target1.type=ClassTarget
 target1.width=110
 target1.x=160
 target1.y=10
-<<<<<<< HEAD
-target10.editor.height=696
-target10.editor.width=748
-target10.editor.x=0
-target10.editor.y=96
-target10.height=50
-target10.name=Farm
-=======
 target10.editor.height=700
 target10.editor.width=900
 target10.editor.x=193
 target10.editor.y=77
 target10.height=50
 target10.name=Hen
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 target10.naviview.expanded=true
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
 target10.x=70
-<<<<<<< HEAD
-target10.y=10
-target11.editor.height=700
-target11.editor.width=900
-target11.editor.x=193
-target11.editor.y=77
-target11.height=50
-target11.name=Hen
-target11.naviview.expanded=true
-target11.showInterface=false
-target11.type=ClassTarget
-target11.width=80
-target11.x=70
-target11.y=70
-target12.editor.height=700
-target12.editor.width=900
-target12.editor.x=455
-target12.editor.y=22
-=======
 target10.y=70
 target11.editor.height=700
 target11.editor.width=900
@@ -202,7 +160,6 @@ target12.editor.height=700
 target12.editor.width=900
 target12.editor.x=40
 target12.editor.y=42
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 target12.height=50
 target12.name=BlackEgg
 target12.naviview.expanded=false
@@ -224,25 +181,6 @@ target2.width=160
 target2.x=100
 target2.y=190
 target3.editor.height=700
-<<<<<<< HEAD
-target3.editor.width=900
-target3.editor.x=540
-target3.editor.y=41
-target3.height=50
-target3.name=Counter
-target3.naviview.expanded=false
-target3.showInterface=false
-target3.type=ClassTarget
-target3.width=80
-target3.x=110
-target3.y=250
-target4.editor.height=700
-target4.editor.width=648
-target4.editor.x=60
-target4.editor.y=54
-target4.height=50
-target4.name=Basket
-=======
 target3.editor.width=995
 target3.editor.x=134
 target3.editor.y=100
@@ -260,69 +198,10 @@ target4.editor.x=340
 target4.editor.y=10
 target4.height=50
 target4.name=timer
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 target4.naviview.expanded=true
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
-<<<<<<< HEAD
-target4.x=160
-target4.y=70
-target5.editor.height=700
-target5.editor.width=900
-target5.editor.x=40
-target5.editor.y=42
-target5.height=50
-target5.name=Life
-target5.naviview.expanded=false
-target5.showInterface=false
-target5.type=ClassTarget
-target5.width=80
-target5.x=200
-target5.y=250
-target6.editor.height=700
-target6.editor.width=775
-target6.editor.x=665
-target6.editor.y=54
-target6.height=50
-target6.name=ScoreBoard
-target6.naviview.expanded=true
-target6.showInterface=false
-target6.type=ClassTarget
-target6.width=90
-target6.x=10
-target6.y=250
-target7.editor.height=700
-target7.editor.width=995
-target7.editor.x=9
-target7.editor.y=22
-target7.height=50
-target7.name=Egg
-target7.naviview.expanded=true
-target7.showInterface=false
-target7.type=AbstractTarget
-target7.width=80
-target7.x=10
-target7.y=130
-target8.editor.height=700
-target8.editor.width=900
-target8.editor.x=364
-target8.editor.y=76
-target8.height=50
-target8.name=GoldenEgg
-target8.naviview.expanded=true
-target8.showInterface=false
-target8.type=ClassTarget
-target8.width=90
-target8.x=190
-target8.y=130
-target9.editor.height=700
-target9.editor.width=900
-target9.editor.x=677
-target9.editor.y=65
-target9.height=50
-target9.name=WhiteEgg
-=======
 target4.x=10
 target4.y=250
 target5.editor.height=700
@@ -339,8 +218,8 @@ target5.x=190
 target5.y=130
 target6.editor.height=744
 target6.editor.width=1382
-target6.editor.x=-8
-target6.editor.y=-8
+target6.editor.x=0
+target6.editor.y=22
 target6.height=50
 target6.name=Farm
 target6.naviview.expanded=true
@@ -379,17 +258,11 @@ target9.editor.x=60
 target9.editor.y=54
 target9.height=50
 target9.name=Basket
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 target9.naviview.expanded=true
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
-<<<<<<< HEAD
-target9.x=100
-target9.y=130
-=======
 target9.x=160
 target9.y=70
->>>>>>> c3f543f2693b5ec4c1574f02bfecbb1c4d250679
 version=2.5.0
 world.lastInstantiated=Farm

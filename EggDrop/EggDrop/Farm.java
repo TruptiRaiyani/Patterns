@@ -30,7 +30,7 @@ public class Farm extends World
     void addObjectsToFarm()
     {
       counter = new Counter();
-      addObject(counter, 50, 15);
+      addObject(counter, 60, 20);
       //c.setLocation(49, 16);
         
       woodenplank = new WoodenPlank();
@@ -43,11 +43,11 @@ public class Farm extends World
       addObject(basket,400,480);
       
       life1 = new Life();
-      addObject(life1,690,10);
+      addObject(life1,690,20);
       life2 = new Life();
-      addObject(life2,730,10);
+      addObject(life2,730,20);
       life3 = new Life();
-      addObject(life3,770,10);
+      addObject(life3,770,20);
       timer = new timer();
       addObject(timer, 450, 15);
     }
