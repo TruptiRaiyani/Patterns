@@ -89,6 +89,8 @@ public class Farm extends World
     
     public void stopped(){
        sound.setVolume(0);
+       Greenfoot.setWorld(this);
+       lifecounter=0;//reset
     }
     
      public void removeLife(int lifecounter)

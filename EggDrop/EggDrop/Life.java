@@ -10,7 +10,6 @@ public class Life extends Actor
 {
    GreenfootSound sound = new GreenfootSound("sad.wav"); 
   // private GreenfootImage image1= new GreenfootImage("gameover.gif");
-   Farm farm =  (Farm)getWorld();
     public Life()
     {
          GreenfootImage image = getImage() ;
@@ -22,11 +21,6 @@ public class Life extends Actor
     public void act() 
     {
         // Add your action code here.
-       
-        if(farm.lifecounter >= 3)
-       {
-           endgame();
-        }
          
     } 
     
@@ -35,7 +29,7 @@ public class Life extends Actor
         sound.play();
         sound.setVolume(80);
       
-        getWorld().addObject(new GameOver(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+        //getWorld().addObject(new GameOver(), getWorld().getWidth()/2, getWorld().getHeight()/2);
         Greenfoot.stop();
         
      }
