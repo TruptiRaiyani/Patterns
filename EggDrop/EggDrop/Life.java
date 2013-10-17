@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Life extends Actor
 {
    GreenfootSound sound = new GreenfootSound("sad.wav"); 
+   Farm farm =  (Farm)getWorld();
   // private GreenfootImage image1= new GreenfootImage("gameover.gif");
     public Life()
     {
@@ -21,7 +22,10 @@ public class Life extends Actor
     public void act() 
     {
         // Add your action code here.
-         
+          if(farm.lifecounter >= 3)
+       {
+           endgame();
+        }
     } 
     
     public void endgame()
