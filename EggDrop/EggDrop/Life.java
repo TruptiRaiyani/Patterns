@@ -31,6 +31,7 @@ public class Life extends Actor
         sound.play();
         sound.setVolume(80);
         lifecounter=0;
+        
         Greenfoot.stop();
         
      }

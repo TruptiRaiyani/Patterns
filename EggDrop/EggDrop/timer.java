@@ -23,6 +23,7 @@ public class timer extends Actor
         {  
             sound.play();
         sound.setVolume(80);
+        getWorld().addObject(new GameOver(), getWorld().getWidth()/2, getWorld().getHeight()/2);
              Greenfoot.stop();
              
         }  
