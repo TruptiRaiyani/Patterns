@@ -16,6 +16,12 @@ public class timer extends Actor
      private int time = 20;  
     private int count = 65;  
     GreenfootSound sound = new GreenfootSound("sad.wav"); 
+    public timer()
+    {
+       Farm farm =  (Farm)getWorld();
+         
+        setImage(new GreenfootImage("Total time : " + time  , 30, Color.WHITE, Color.BLACK)); 
+    }
     public void act()   
     {  
         // Add your action code here.  
@@ -49,7 +55,7 @@ public class timer extends Actor
     {  
         Farm farm =  (Farm)getWorld();
          
-        setImage(new GreenfootImage("time left: " + time  , 30, Color.WHITE, Color.BLACK));  
+        setImage(new GreenfootImage("Time left: " + time  , 30, Color.WHITE, Color.BLACK));  
     }  
       
     public void setTime()  

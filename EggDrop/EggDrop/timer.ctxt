@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ act()
+comment0.target=timer()
 comment1.params=
-comment1.target=boolean\ counter()
+comment1.target=void\ act()
 comment2.params=
-comment2.target=void\ display()
+comment2.target=boolean\ counter()
 comment3.params=
-comment3.target=void\ setTime()
+comment3.target=void\ display()
 comment4.params=
-comment4.target=boolean\ isTimeUp()
-numComments=5
+comment4.target=void\ setTime()
+comment5.params=
+comment5.target=boolean\ isTimeUp()
+numComments=6
