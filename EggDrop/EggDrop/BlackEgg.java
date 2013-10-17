@@ -31,8 +31,10 @@ public class BlackEgg extends Egg
          boing.play();
          //remove life
          Farm farm =  (Farm)getWorld();
-         lifecounter++;
-         farm.removeLife(lifecounter);
+        
+          farm.lifecounter = farm.lifecounter + 1;
+         farm.removeLife(farm.lifecounter);
+        
     }
     
    

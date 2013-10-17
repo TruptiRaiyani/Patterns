@@ -15,7 +15,7 @@ public class Farm extends World
     private Counter counter;
     private timer timer;
     private Life life1,life2,life3;
-    public static int lifecounter;
+    public  static int lifecounter;
     /**
      * Constructor for objects of class Farm.
      * 
@@ -101,11 +101,11 @@ public class Farm extends World
         {
             removeObject(life2);
         }
-        else if(lifecounter == 3)
+        else if(lifecounter >= 3)
         {
             removeObject(life3);
             life3.endgame();
-            lifecounter=0;//reset
+           // lifecounter=0;//reset
         }
         
     }

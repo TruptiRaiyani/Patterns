@@ -22,6 +22,7 @@ public class Counter extends Actor
     
     public void updateScore(int addCount)
     {
+        
         target += addCount;
         getImage().clear();
         getImage().drawString(prefix +"" + target, 50, 60);

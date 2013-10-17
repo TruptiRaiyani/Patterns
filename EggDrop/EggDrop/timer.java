@@ -47,7 +47,9 @@ public class timer extends Actor
       
     private void display()  
     {  
-        setImage(new GreenfootImage("time left: " + time, 30, Color.WHITE, Color.BLACK));  
+        Farm farm =  (Farm)getWorld();
+         
+        setImage(new GreenfootImage("time left: " + time  , 30, Color.WHITE, Color.BLACK));  
     }  
       
     public void setTime()  
