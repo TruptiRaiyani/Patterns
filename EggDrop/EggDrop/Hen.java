@@ -34,25 +34,23 @@ public class Hen extends Actor
         
         if( Greenfoot.getRandomNumber(100) ==0)
         {
-            WhiteEgg white_egg;
-            GoldenEgg golden_egg;
-            BlackEgg black_egg;
+            Egg egg;
             
             int eggPicker = Greenfoot.getRandomNumber(80);
             if(eggPicker >= 50 && eggPicker <= 60)
             {
-             golden_egg=new GoldenEgg();       
-             getWorld().addObject(golden_egg, this.getX(), this.getY()+45);
+             egg=new GoldenEgg();       
+             getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             else if (eggPicker >= 60 && eggPicker <= 70)
             {
-             black_egg=new BlackEgg();       
-            getWorld().addObject(black_egg, this.getX(), this.getY()+45);
+             egg=new BlackEgg();       
+            getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             else
             {
-            white_egg=new WhiteEgg();       
-            getWorld().addObject(white_egg, this.getX(), this.getY()+45);
+            egg=new WhiteEgg();       
+            getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
                            
         }

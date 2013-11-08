@@ -17,7 +17,18 @@ public abstract class Egg extends Actor
     
     GreenfootSound sound = new GreenfootSound("egg_crack.wav"); 
      public static int lifecounter;
-    
+     
+    public enum EggType{
+        GOLDEN,
+        WHITE,
+        BLACK
+    }
+     
+    private EggType type;
+    public Egg(EggType mytype)
+    {
+        type= mytype;
+    }
     public void act() 
     {
          Farm farm =  (Farm)getWorld();

@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WhiteEgg extends Egg
 {
     public WhiteEgg(){
+          super(Egg.EggType.WHITE);
         GreenfootImage image = getImage() ;
         image.scale( 35, 20 ) ;
        

@@ -10,6 +10,7 @@ public class BlackEgg extends Egg
 {
     GreenfootSound boing = new GreenfootSound("boing.wav");
     public BlackEgg(){
+          super(Egg.EggType.BLACK);
         GreenfootImage image = getImage() ;
         image.scale( 35, 20 ) ;
        

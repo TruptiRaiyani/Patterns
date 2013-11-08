@@ -11,8 +11,10 @@ public class GoldenEgg extends Egg
      GreenfootSound bingo = new GreenfootSound("bingo1.wav");
      
     public GoldenEgg(){
-          GreenfootImage image = getImage() ;
+        super(Egg.EggType.GOLDEN);
+        GreenfootImage image = getImage() ;
         image.scale( 35, 20 ) ;
+        
     }
     /**
      * Act - do whatever the GoldenEgg wants to do. This method is called whenever
