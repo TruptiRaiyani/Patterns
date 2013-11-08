@@ -21,6 +21,7 @@ public class Hen extends Actor
      */
     public void act() 
     {
+        EggFactory eggFactory = new EggFactory();
         // Add your action code here.
         move(4);
         int random = Greenfoot.getRandomNumber(5000);
@@ -39,17 +40,17 @@ public class Hen extends Actor
             int eggPicker = Greenfoot.getRandomNumber(80);
             if(eggPicker >= 50 && eggPicker <= 60)
             {
-             egg=new GoldenEgg();       
+             egg = eggFactory.createEgg(Egg.EggType.GOLDEN);       
              getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             else if (eggPicker >= 60 && eggPicker <= 70)
             {
-             egg=new BlackEgg();       
+             egg = eggFactory.createEgg(Egg.EggType.BLACK);     
             getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             else
             {
-            egg=new WhiteEgg();       
+            egg = eggFactory.createEgg(Egg.EggType.WHITE);
             getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
                            
