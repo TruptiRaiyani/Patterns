@@ -14,7 +14,8 @@ public class Farm extends World
     private Egg egg;
     private Counter counter;
     private timer timer;
-    private Life life1,life2,life3;
+    private Life life;
+    private LifeCreator lifecreator;
     public  static int lifecounter;
     /**
      * Constructor for objects of class Farm.
@@ -42,15 +43,18 @@ public class Farm extends World
       basket = new Basket();
       addObject(basket,400,480);
       
-      life1 = new Life();
-      addObject(life1,690,20);
-      life2 = new Life();
-      addObject(life2,730,20);
-      life3 = new Life();
-      addObject(life3,770,20);
+     
+      lifecreator = new LifeCreator(this);//Calling life creator from Farm
+      
       timer = new timer();
       addObject(timer, 450, 15);
     }
+    
+     public LifeCreator getLifeCreator()
+    {
+        return lifecreator;
+    }
+    
     
     public Hen getHen()
     {
@@ -93,23 +97,4 @@ public class Farm extends World
        lifecounter=0;//reset
     }
     
-     public void removeLife(int lifecounter)
-    {
-        if(lifecounter==1)
-        {
-           removeObject(life1);
-        }
-        else if(lifecounter==2)
-        {
-            removeObject(life2);
-        }
-        else if(lifecounter >= 3)
-        {
-            removeObject(life3);
-            addObject(new GameOver(),getWidth()/2, getHeight()/2);
-            life3.endgame();
-           // lifecounter=0;//reset
-        }
-        
-    }
 }

@@ -36,12 +36,15 @@ public class Hen extends Actor
         if( Greenfoot.getRandomNumber(100) ==0)
         {
             Egg egg;
-            
+           Farm farm =  (Farm)getWorld();
+                      
             int eggPicker = Greenfoot.getRandomNumber(80);
             if(eggPicker >= 50 && eggPicker <= 60)
             {
              egg = eggFactory.createEgg(Egg.EggType.GOLDEN);       
              getWorld().addObject(egg, this.getX(), this.getY()+45);
+             
+             
             }
             else if (eggPicker >= 60 && eggPicker <= 70)
             {
@@ -52,8 +55,9 @@ public class Hen extends Actor
             {
             egg = eggFactory.createEgg(Egg.EggType.WHITE);
             getWorld().addObject(egg, this.getX(), this.getY()+45);
+            
             }
-                           
+             egg.register(farm.getLifeCreator());//register life creator observer into egg subject              
         }
 
     }  

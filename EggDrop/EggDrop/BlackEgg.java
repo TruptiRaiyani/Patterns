@@ -30,18 +30,26 @@ public class BlackEgg extends Egg
     {
         ((Farm)getWorld()).getCounter().updateScore(-10);
          boing.play();
-         //remove life
-         //Farm farm =  (Farm)getWorld();
-        
-          //farm.lifecounter = farm.lifecounter + 1;
-         //farm.removeLife(farm.lifecounter);
-        
+                 
     }
     
-   
+   //Life observer 
     public void removeLifeForWhiteAndGold(){
       
      //do nothing
+    }
+    
+    public void register(LifeObserver obj)
+    {
+        //do nothing
+    }
+    public void unregister(LifeObserver obj)
+    {
+         //do nothing
+    }
+    public void notifyObserver()
+    {
+         //do nothing
     }
     
   }    

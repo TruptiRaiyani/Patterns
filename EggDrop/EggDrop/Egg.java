@@ -1,19 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Egg here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Egg extends Actor
+public abstract class Egg extends Actor implements Subject
 {
+   private ArrayList<LifeObserver> lives; 
+   public String success;
     
+     public Egg()
+    {
+	 //ArrayList to hold all observers
+	 lives = new ArrayList();
+    }
     
-    /**
-     * Act - do whatever the Egg wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     
     GreenfootSound sound = new GreenfootSound("egg_crack.wav"); 
      public static int lifecounter;
@@ -56,9 +59,7 @@ public abstract class Egg extends Actor
             setLocation(getX(), ((Farm)getWorld()).getHeight()-25);
             
             if(Greenfoot.getRandomNumber(50) == 0) {
-                //lifecounter++;
-                //farm.removeLife(lifecounter);
-                removeLifeForWhiteAndGold();
+                setState("eggbreak");//Set state for life observer
                 world.removeObject(this);
             }
     }
@@ -66,6 +67,35 @@ public abstract class Egg extends Actor
    }
    
     public abstract void updateScore();
-    public abstract void removeLifeForWhiteAndGold();
-
+    
+    //Life observer implementation
+    
+    public ArrayList<LifeObserver> getLives()
+    {
+        return lives;
+    }
+    public void register(LifeObserver newObserver){
+        lives.add(newObserver);
+    }
+    
+    public void unregister(LifeObserver deleteObserver) {
+        lives.remove(deleteObserver);
+    }
+    
+     public void notifyObserver(){
+         
+        for(LifeObserver observer : lives){
+            observer.update();
+                      
+        }
+    }
+    
+     public void setState(String success){
+        this.success = success;
+        notifyObserver();
+    }
+       
+    public String getState(){
+        return success;
+    }
 }

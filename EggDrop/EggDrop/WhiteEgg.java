@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class WhiteEgg here.
  * 
@@ -8,11 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class WhiteEgg extends Egg
 {
+     private ArrayList<LifeObserver> lives; 
+     public String success;
     public WhiteEgg(){
-          super(Egg.EggType.WHITE);
+        super(Egg.EggType.WHITE);
         GreenfootImage image = getImage() ;
         image.scale( 35, 20 ) ;
-       
+        // Creates an ArrayList to hold all observers
+	    lives = new ArrayList();
     }
     /**
      * Act - do whatever the WhiteEgg wants to do. This method is called whenever
@@ -29,13 +32,32 @@ public class WhiteEgg extends Egg
        ((Farm)getWorld()).getCounter().updateScore(1);
     }
     
-    public void removeLifeForWhiteAndGold(){
-      Farm farm =  (Farm)getWorld();
-     
-       farm.lifecounter = farm.lifecounter + 1;
-      farm.removeLife(farm.lifecounter);
-   
-
+          
+    //LifeObserver pattern implementation
+    
+     public void register(LifeObserver newObserver){
+        lives.add(newObserver);
+    }
+    
+    
+    public void unregister(LifeObserver deleteObserver) {
+        lives.remove(deleteObserver);
+    }
+    
+     public void notifyObserver(){
+         //ArrayList<LifeObserver> localLife = getLives();
+         for(LifeObserver observer : lives){
+            observer.update();
+        }
+    }
+    
+     public void setState(String success){
+        this.success = success;
+        notifyObserver();
+    }
+       
+    public String getState(){
+        return success;
     }
     
   }    
