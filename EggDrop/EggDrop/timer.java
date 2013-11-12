@@ -2,35 +2,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.*;
 import java.awt.Color;
 /**
- * Write a description of class timer here.
+ * Write a description of class timerFinal here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class timer extends Actor
+public class timer extends ConcreteTimerSubject
 {
     /**
-     * Act - do whatever the timer wants to do. This method is called whenever
+     * Act - do whatever the timerFinal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-     private int time = 20;  
+      private int time = 20;  
     private int count = 65;  
-    GreenfootSound sound = new GreenfootSound("sad.wav"); 
-    public timer()
+   
+    
+    public void act() 
     {
-       Farm farm =  (Farm)getWorld();
-         
-        setImage(new GreenfootImage("Total time : " + time  , 30, Color.WHITE, Color.BLACK)); 
-    }
-    public void act()   
-    {  
-        // Add your action code here.  
         if(time == 0)  
         {  
-            sound.play();
-        sound.setVolume(80);
-        getWorld().addObject(new GameOver(), getWorld().getWidth()/2, getWorld().getHeight()/2);
-             Greenfoot.stop();
+            super.SetState("TimeOff");
+           
              
         }  
           
@@ -40,8 +32,13 @@ public class timer extends Actor
             count = 65;  
         }  
         display();  
-    }      
-      
+    }    
+    public timer()
+    {
+       Farm farm =  (Farm)getWorld();
+         
+        setImage(new GreenfootImage("Total time : " + time  , 30, Color.WHITE, Color.BLACK)); 
+    }
     private boolean counter()  
     {  
         if(count > 0)  
@@ -67,6 +64,4 @@ public class timer extends Actor
     {  
         return time == 0;  
     }  
-      
- 
 }

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
-comment0.target=timer()
+comment0.target=void\ act()
 comment1.params=
-comment1.target=void\ act()
+comment1.target=timer()
 comment2.params=
 comment2.target=boolean\ counter()
 comment3.params=
