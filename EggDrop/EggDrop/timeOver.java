@@ -7,7 +7,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class timeOver extends ConcreteTimerObserver
+public class timeOver implements Observer
 {
     /**
      * Act - do whatever the gameOverFinal wants to do. This method is called whenever
@@ -21,12 +21,15 @@ public class timeOver extends ConcreteTimerObserver
     public timeOver()
     {
     }
-    public void gameOver()
+    public void gameOver(Farm farm)
     {
          sound.play();
       
         sound.setVolume(80);
      //  gw.addObject(this, gw.getWidth()/2, gw.getHeight()/2);
             Greenfoot.stop();
+    }
+    public void update()
+    {
     }
 }

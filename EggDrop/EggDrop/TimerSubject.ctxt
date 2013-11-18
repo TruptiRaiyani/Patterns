@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=java.lang.String\ GetState()
+comment1.params=SubState
+comment1.target=void\ SetState(java.lang.String)
+comment2.params=
+comment2.target=void\ notifyTimerObserver()
+comment3.params=obj
+comment3.target=void\ register(Observer)
+comment4.params=obj
+comment4.target=void\ unregister(Observer)
+comment5.params=
+comment5.target=void\ notifyObserver()
+numComments=6
