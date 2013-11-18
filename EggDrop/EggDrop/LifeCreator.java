@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeCreator extends Actor implements LifeObserver
+public class LifeCreator implements LifeObserver
  {
     GreenfootSound sound = new GreenfootSound("sad.wav"); 
     private Life life1,life2,life3;
@@ -14,14 +14,7 @@ public class LifeCreator extends Actor implements LifeObserver
      Egg egg;
    String  subjectState="noeggbreak";
     private ArrayList<Life> lives; 
-    /**
-     * Act - do whatever the LifeCreator wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+  
     
     public LifeCreator(Farm farm)
     {
@@ -35,10 +28,6 @@ public class LifeCreator extends Actor implements LifeObserver
          
          life3 = new Life();
          farm.addObject(life3,770,20); 
-         
-        
-        GreenfootImage image = getImage() ;
-        image.scale( 35, 25 ) ; 
         
         lives = new ArrayList();
         lives.add(life1);

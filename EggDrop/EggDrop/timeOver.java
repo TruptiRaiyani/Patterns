@@ -17,10 +17,7 @@ public class timeOver extends ConcreteTimerObserver
      GreenfootSound sound = new GreenfootSound("sad.wav"); 
      //Farm farm;
      // Farm gw=(Farm)getWorld();
-    public void act() 
-    {
-        // Add your action code here.
-    } 
+   
     public timeOver()
     {
     }

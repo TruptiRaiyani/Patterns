@@ -1,8 +1,6 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ act()
+comment0.target=timeOver()
 comment1.params=
-comment1.target=timeOver()
-comment2.params=
-comment2.target=void\ gameOver()
-numComments=3
+comment1.target=void\ gameOver()
+numComments=2
