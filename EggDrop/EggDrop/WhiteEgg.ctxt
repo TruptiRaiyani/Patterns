@@ -16,6 +16,4 @@ comment6.params=success
 comment6.target=void\ setState(java.lang.String)
 comment7.params=
 comment7.target=java.lang.String\ getState()
-comment8.params=
-comment8.target=Egg\ dropEgg()
-numComments=9
+numComments=8

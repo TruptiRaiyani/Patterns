@@ -21,8 +21,8 @@ public class Hen extends Actor
      */
     public void act() 
     {
-        //EggFactory eggFactory = new EggFactory();
-        // Add your action code here.
+        EggFactory eggFactory = new EggFactory();
+        
         move(4);
         int random = Greenfoot.getRandomNumber(5000);
         if((random>200 & random<300) || ((Farm)getWorld()).atWorldEdge(this))
@@ -39,25 +39,28 @@ public class Hen extends Actor
            Farm farm =  (Farm)getWorld();
            Egg egg ;       
            int eggPicker = Greenfoot.getRandomNumber(80);
-           DropEggStrategy dropEgg = new DropEggStrategy();
+           //DropEggStrategy dropEgg = new DropEggStrategy();
            
             if(eggPicker >= 50 && eggPicker <= 60)
             {
-             dropEgg.setBehavior(new GoldenEgg());
-             egg = dropEgg.drop();
+            // dropEgg.setBehavior(new GoldenEgg());
+            // egg = dropEgg.drop();
+             egg = eggFactory.createEgg(Egg.EggType.GOLDEN);
              getWorld().addObject(egg, this.getX(), this.getY()+45);
              
             }
             else if (eggPicker >= 60 && eggPicker <= 70)
             {
-             dropEgg.setBehavior(new BlackEgg());
-             egg = dropEgg.drop();
+             //dropEgg.setBehavior(new BlackEgg());
+             //egg = dropEgg.drop();
+             egg = eggFactory.createEgg(Egg.EggType.BLACK);
              getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             else
             {
-            dropEgg.setBehavior(new WhiteEgg());
-            egg = dropEgg.drop();
+            //dropEgg.setBehavior(new WhiteEgg());
+            //egg = dropEgg.drop();
+            egg = eggFactory.createEgg(Egg.EggType.WHITE);
             getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
              egg.register(farm.getLifeCreator());//register life creator observer into egg subject              

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WhiteEgg extends Egg implements IEggsBehavior
+public class WhiteEgg extends Egg //implements IEggsBehavior
 {
      private ArrayList<LifeObserver> lives; 
      public String success;
@@ -60,6 +60,7 @@ public class WhiteEgg extends Egg implements IEggsBehavior
         return success;
     }
      
+    /*
     //Strategy Design Pattern
     Egg egg ;
     EggFactory eggFactory = new EggFactory();
@@ -69,6 +70,7 @@ public class WhiteEgg extends Egg implements IEggsBehavior
           egg = eggFactory.createEgg(Egg.EggType.WHITE);
           return egg;
         }
+        */
   }    
 
 
