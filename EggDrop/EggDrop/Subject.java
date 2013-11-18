@@ -13,5 +13,7 @@
     public void unregister(Observer obj);
     public void notifyObserver();
     
+     public void notifyTimerObserver();
+    
 }
 

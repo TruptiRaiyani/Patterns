@@ -7,7 +7,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class timer extends ConcreteTimerSubject
+public class timer extends TimerSubject
 {
     /**
      * Act - do whatever the timerFinal wants to do. This method is called whenever

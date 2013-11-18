@@ -1,4 +1,6 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ update()
-numComments=1
+comment1.params=farm
+comment1.target=void\ gameOver(Farm)
+numComments=2

@@ -60,7 +60,7 @@ public class GoldenEgg extends Egg //implements IEggsBehavior
     public String getState(){
         return success;
     }
-   
+   public void notifyTimerObserver(){}
     /*
    //Strategy Design Pattern
     Egg egg;

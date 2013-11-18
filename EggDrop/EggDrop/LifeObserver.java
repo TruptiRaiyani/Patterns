@@ -71,5 +71,6 @@ public class LifeObserver implements Observer
         this.subjectState = subjectState;
         
     }
+     public void gameOver(Farm farm){}
     
 }

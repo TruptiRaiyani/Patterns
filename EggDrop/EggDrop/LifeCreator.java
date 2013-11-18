@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeCreator implements LifeObserver
+public class LifeCreator implements Observer
  {
     GreenfootSound sound = new GreenfootSound("sad.wav"); 
     private Life life1,life2,life3;
@@ -71,5 +71,5 @@ public class LifeCreator implements LifeObserver
         this.subjectState = subjectState;
         
     }
-    
+    public void gameOver(Farm farm){}
 }

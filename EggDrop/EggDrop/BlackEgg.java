@@ -51,7 +51,7 @@ public class BlackEgg extends Egg //implements IEggsBehavior
     {
          //do nothing
     }
-    
+     public void notifyTimerObserver(){}
     /*
     //Strategy Design Pattern
     Egg egg;
