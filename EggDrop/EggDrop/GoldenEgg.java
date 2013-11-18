@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class GoldenEgg extends Egg //implements IEggsBehavior
 {
      GreenfootSound bingo = new GreenfootSound("bingo1.wav");
-     private ArrayList<LifeObserver> lives; 
+     private ArrayList<Observer> lives; 
      public String success;
    
     public GoldenEgg(){
@@ -38,16 +38,16 @@ public class GoldenEgg extends Egg //implements IEggsBehavior
     
       //LifeObserver pattern implementation
     
-     public void register(LifeObserver newObserver){
+     public void register(Observer newObserver){
         lives.add(newObserver);
     }
     
-    public void unregister(LifeObserver deleteObserver) {
+    public void unregister(Observer deleteObserver) {
         lives.remove(deleteObserver);
     }
     
      public void notifyObserver(){
-          for(LifeObserver observer : lives){
+          for(Observer observer : lives){
             observer.update();
         }
     }

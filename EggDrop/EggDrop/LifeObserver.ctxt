@@ -1,4 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ update()
-numComments=1
+comment0.params=farm
+comment0.target=LifeObserver(Farm)
+comment1.params=
+comment1.target=void\ update()
+comment2.params=
+comment2.target=void\ endgame()
+comment3.params=
+comment3.target=java.lang.String\ getState()
+comment4.params=subjectState
+comment4.target=void\ setState(java.lang.String)
+numComments=5

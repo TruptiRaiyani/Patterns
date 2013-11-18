@@ -63,7 +63,7 @@ public class Hen extends Actor
             egg = eggFactory.createEgg(Egg.EggType.WHITE);
             getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
-             egg.register(farm.getLifeCreator());//register life creator observer into egg subject              
+             egg.register(farm.getLifeObserver());//register life creator observer into egg subject              
         }
 
     }  

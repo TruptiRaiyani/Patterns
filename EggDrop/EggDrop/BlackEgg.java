@@ -39,11 +39,11 @@ public class BlackEgg extends Egg //implements IEggsBehavior
      //do nothing
     }
     
-    public void register(LifeObserver obj)
+    public void register(Observer obj)
     {
         //do nothing
     }
-    public void unregister(LifeObserver obj)
+    public void unregister(Observer obj)
     {
          //do nothing
     }

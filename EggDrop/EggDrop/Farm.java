@@ -15,7 +15,7 @@ public class Farm extends World
     private Counter counter;
     private timer timer;
     private Life life;
-    private LifeCreator lifecreator;
+    private LifeObserver lifeobserver;
     public  static int lifecounter;
     /**
      * Constructor for objects of class Farm.
@@ -44,15 +44,15 @@ public class Farm extends World
       addObject(basket,400,480);
       
      
-      lifecreator = new LifeCreator(this);//Calling life creator from Farm
+      lifeobserver = new LifeObserver(this);//Calling life creator from Farm
       
       timer = new timer();
       addObject(timer, 450, 15);
     }
     
-     public LifeCreator getLifeCreator()
+     public LifeObserver getLifeObserver()
     {
-        return lifecreator;
+        return lifeobserver;
     }
     
     

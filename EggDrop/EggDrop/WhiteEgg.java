@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class WhiteEgg extends Egg //implements IEggsBehavior
 {
-     private ArrayList<LifeObserver> lives; 
+     private ArrayList<Observer> lives; 
      public String success;
     public WhiteEgg(){
         super(Egg.EggType.WHITE);
@@ -35,18 +35,18 @@ public class WhiteEgg extends Egg //implements IEggsBehavior
           
     //LifeObserver pattern implementation
     
-     public void register(LifeObserver newObserver){
+     public void register(Observer newObserver){
         lives.add(newObserver);
     }
     
     
-    public void unregister(LifeObserver deleteObserver) {
+    public void unregister(Observer deleteObserver) {
         lives.remove(deleteObserver);
     }
     
      public void notifyObserver(){
          //ArrayList<LifeObserver> localLife = getLives();
-         for(LifeObserver observer : lives){
+         for(Observer observer : lives){
             observer.update();
         }
     }

@@ -9,8 +9,8 @@
     
     public interface Subject  
 {
-    public void register(LifeObserver obj);
-    public void unregister(LifeObserver obj);
+    public void register(Observer obj);
+    public void unregister(Observer obj);
     public void notifyObserver();
     
 }

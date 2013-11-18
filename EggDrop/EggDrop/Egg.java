@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public abstract class Egg extends Actor implements Subject
 {
-   private ArrayList<LifeObserver> lives; 
+   private ArrayList<Observer> lives; 
    public String success;
     
      public Egg()
@@ -70,21 +70,21 @@ public abstract class Egg extends Actor implements Subject
     
     //Life observer implementation
     
-    public ArrayList<LifeObserver> getLives()
+    public ArrayList<Observer> getLives()
     {
         return lives;
     }
-    public void register(LifeObserver newObserver){
+    public void register(Observer newObserver){
         lives.add(newObserver);
     }
     
-    public void unregister(LifeObserver deleteObserver) {
+    public void unregister(Observer deleteObserver) {
         lives.remove(deleteObserver);
     }
     
      public void notifyObserver(){
          
-        for(LifeObserver observer : lives){
+        for(Observer observer : lives){
             observer.update();
                       
         }
