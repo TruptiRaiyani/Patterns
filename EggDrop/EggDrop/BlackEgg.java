@@ -28,11 +28,6 @@ public class BlackEgg extends Egg implements IEggsBehavior
     
  
      //****************Counter Observer implemetation start
-    public void updateScore()
-    {
-        notifyCounterObserver();
-    
-    }
    
       public void notifyCounterObserver(){
       ((Farm)getWorld()).getCounter().updateScore(-10);

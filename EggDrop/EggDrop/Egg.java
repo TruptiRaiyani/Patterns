@@ -47,7 +47,7 @@ public abstract class Egg extends Actor implements Subject
         if(isTouching(Basket.class) && (yOfBasket==getY()) )
         {
             
-            updateScore();
+            notifyCounterObserver();
             world.removeObject(this);   
             
         } 
@@ -67,7 +67,6 @@ public abstract class Egg extends Actor implements Subject
       
    }
    
-    public abstract void updateScore();
     
     //Life observer implementation
     
