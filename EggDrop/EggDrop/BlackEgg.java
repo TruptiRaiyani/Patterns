@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BlackEgg extends Egg //implements IEggsBehavior
+public class BlackEgg extends Egg implements IEggsBehavior
 {
     GreenfootSound boing = new GreenfootSound("boing.wav");
     public BlackEgg(){
@@ -52,17 +52,13 @@ public class BlackEgg extends Egg //implements IEggsBehavior
          //do nothing
     }
      public void notifyTimerObserver(){}
-    /*
-    //Strategy Design Pattern
-    Egg egg;
-    EggFactory eggFactory = new EggFactory();
-                                  
-    public Egg dropEgg(){
+    
+    //Strategy Design Pattern                    
+    public Egg dropEgg(Egg egg){
           System.out.println("Drop Black Egg");
-          egg = eggFactory.createEgg(Egg.EggType.BLACK);     
           return egg;
         }
-    */
+    
   }    
 
 

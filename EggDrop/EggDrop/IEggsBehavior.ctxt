@@ -1,4 +1,4 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Egg\ dropEgg()
+comment0.params=egg
+comment0.target=Egg\ dropEgg(Egg)
 numComments=1

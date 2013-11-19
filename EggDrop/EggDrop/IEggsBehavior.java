@@ -8,5 +8,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public interface IEggsBehavior 
 {
-  public Egg dropEgg();
+  public Egg dropEgg(Egg egg);
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WhiteEgg extends Egg //implements IEggsBehavior
+public class WhiteEgg extends Egg implements IEggsBehavior
 {
      private ArrayList<Observer> lives; 
      public String success;
@@ -59,18 +59,15 @@ public class WhiteEgg extends Egg //implements IEggsBehavior
     public String getState(){
         return success;
     }
-      public void notifyTimerObserver(){}
-    /*
+     
+    public void notifyTimerObserver(){}
+    
     //Strategy Design Pattern
-    Egg egg ;
-    EggFactory eggFactory = new EggFactory();
-
-    public Egg dropEgg(){
+    public Egg dropEgg(Egg egg){
           System.out.println("Drop White Egg");
-          egg = eggFactory.createEgg(Egg.EggType.WHITE);
           return egg;
         }
-        */
+        
   }    
 
 

@@ -31,11 +31,12 @@ public class EggFactory
     public Egg createEgg(Egg.EggType type)
     {
        Egg egg = null;
-       
+
        switch(type)
        {
         case GOLDEN:
             egg = new GoldenEgg();
+
             break;
         case WHITE:
             egg = new WhiteEgg();

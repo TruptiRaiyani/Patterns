@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GoldenEgg extends Egg //implements IEggsBehavior
+public class GoldenEgg extends Egg implements IEggsBehavior
 {
      GreenfootSound bingo = new GreenfootSound("bingo1.wav");
      private ArrayList<Observer> lives; 
@@ -61,16 +61,12 @@ public class GoldenEgg extends Egg //implements IEggsBehavior
         return success;
     }
    public void notifyTimerObserver(){}
-    /*
+    
    //Strategy Design Pattern
-    Egg egg;
-    EggFactory eggFactory = new EggFactory();
-
-    public Egg dropEgg(){
+    public Egg dropEgg(Egg egg){
         System.out.println("Drop Golden Egg");
-        egg = eggFactory.createEgg(Egg.EggType.GOLDEN);       
-         return egg;
+        return egg;
     }
-    */
+    
 }
 
