@@ -11,8 +11,8 @@ public class LifeObserver implements Observer
     GreenfootSound sound = new GreenfootSound("sad.wav"); 
     private Life life1,life2,life3;
     Farm farm;
-     Egg egg;
-   String  subjectState="noeggbreak";
+    Egg egg;
+    String  observerState="noeggbreak";
     private ArrayList<Life> lives; 
   
     
@@ -63,12 +63,12 @@ public class LifeObserver implements Observer
 
      public String getState()
     {
-        return subjectState;
+        return observerState;
     }
     
-    public void setState(String subjectState)
+    public void setState(String observertState)
     {
-        this.subjectState = subjectState;
+        this.observerState = observertState;
         
     }
      public void gameOver(Farm farm){}
