@@ -93,7 +93,7 @@ public abstract class Egg extends Actor implements Subject
     
      public void setState(String success){
         this.success = success;
-        notifyObserver();
+        notifyLifeObserver();
     }
        
     public String getState(){
