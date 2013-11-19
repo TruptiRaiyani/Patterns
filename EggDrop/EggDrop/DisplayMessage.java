@@ -28,4 +28,5 @@ public class DisplayMessage  implements Observer
           
     }
     public void update(){}
+        public void updateScore(int addCount){}
 }

@@ -32,6 +32,7 @@ public abstract class Egg extends Actor implements Subject
     {
         type= mytype;
     }
+    
     public void act() 
     {
          Farm farm =  (Farm)getWorld();
@@ -74,6 +75,7 @@ public abstract class Egg extends Actor implements Subject
     {
         return lives;
     }
+    
     public void register(Observer newObserver){
         lives.add(newObserver);
     }

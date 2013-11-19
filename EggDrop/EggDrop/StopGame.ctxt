@@ -7,4 +7,6 @@ comment2.params=farm
 comment2.target=void\ gameOver(Farm)
 comment3.params=
 comment3.target=void\ update()
-numComments=4
+comment4.params=addCount
+comment4.target=void\ updateScore(int)
+numComments=5

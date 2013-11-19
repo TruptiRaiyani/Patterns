@@ -11,4 +11,6 @@ comment4.params=subjectState
 comment4.target=void\ setState(java.lang.String)
 comment5.params=farm
 comment5.target=void\ gameOver(Farm)
-numComments=6
+comment6.params=addCount
+comment6.target=void\ updateScore(int)
+numComments=7

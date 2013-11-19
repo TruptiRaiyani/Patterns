@@ -72,5 +72,6 @@ public class LifeObserver implements Observer
         
     }
      public void gameOver(Farm farm){}
+         public void updateScore(int addCount){}
     
 }

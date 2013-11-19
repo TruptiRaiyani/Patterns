@@ -40,4 +40,5 @@ public class TimerSubject extends Actor implements Subject
      public void register(Observer obj){}
     public void unregister(Observer obj){}
     public void notifyObserver(){}
+      public void notifyCounterObserver(){}
 }

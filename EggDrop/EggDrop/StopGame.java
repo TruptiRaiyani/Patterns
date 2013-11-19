@@ -36,4 +36,5 @@ public class StopGame  implements Observer
             Greenfoot.stop();
     }
     public void update(){}
+        public void updateScore(int addCount){}
 }

@@ -4,13 +4,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 
-public class Counter extends Actor
+public class Counter extends Actor implements Observer
 {
+    
+    // For counter observer : Counter is concrete class for observer interface
     private int target;
     private String prefix;
     
     public Counter()
     {
+        GreenfootImage image = getImage() ;
+         image.scale( 200, 100 ) ; 
         getImage().scale(200,100);
         target = 0;
         prefix = "Score: ";
@@ -29,8 +33,9 @@ public class Counter extends Actor
     }
     
     
-    
-
+    //*********************************************************
+    public void update(){}
+    public void gameOver(Farm farm){}
     
 }
 

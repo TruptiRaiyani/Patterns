@@ -27,12 +27,19 @@ public class WhiteEgg extends Egg implements IEggsBehavior
         
     }
     
-   public void updateScore()
+  //****************Counter Observer implemetation start
+    public void updateScore()
     {
-       ((Farm)getWorld()).getCounter().updateScore(1);
-    }
+        notifyCounterObserver();
     
-          
+    }
+   
+      public void notifyCounterObserver(){
+       ((Farm)getWorld()).getCounter().updateScore(1);
+        
+        }
+     //***********Counter Observer implemetation end 
+     
     //LifeObserver pattern implementation
     
      public void register(Observer newObserver){

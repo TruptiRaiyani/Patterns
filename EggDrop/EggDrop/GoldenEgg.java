@@ -29,13 +29,21 @@ public class GoldenEgg extends Egg implements IEggsBehavior
         
     } 
     
+    //****************Counter Observer implemetation start
     public void updateScore()
     {
-        ((Farm)getWorld()).getCounter().updateScore(10);
-         bingo.play();
+        notifyCounterObserver();
     
     }
-    
+   
+      public void notifyCounterObserver(){
+        ((Farm)getWorld()).getCounter().updateScore(10);
+         bingo.play();
+        
+        }
+     //***********Counter Observer implemetation end 
+   
+   
       //LifeObserver pattern implementation
     
      public void register(Observer newObserver){
@@ -68,5 +76,6 @@ public class GoldenEgg extends Egg implements IEggsBehavior
         return egg;
     }
     
+       
 }
 

@@ -26,12 +26,20 @@ public class BlackEgg extends Egg implements IEggsBehavior
         
     }
     
-   public void updateScore()
+ 
+     //****************Counter Observer implemetation start
+    public void updateScore()
     {
-        ((Farm)getWorld()).getCounter().updateScore(-10);
-         boing.play();
-                 
+        notifyCounterObserver();
+    
     }
+   
+      public void notifyCounterObserver(){
+      ((Farm)getWorld()).getCounter().updateScore(-10);
+         boing.play();
+        
+        }
+     //***********Counter Observer implemetation end 
     
    //Life observer 
     public void removeLifeForWhiteAndGold(){
@@ -58,7 +66,7 @@ public class BlackEgg extends Egg implements IEggsBehavior
           System.out.println("Drop Black Egg");
           return egg;
         }
-    
+      
   }    
 
 

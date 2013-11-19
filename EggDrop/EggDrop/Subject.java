@@ -14,6 +14,9 @@
     public void notifyObserver();
     
      public void notifyTimerObserver();
+     
+       // For counter observer
+     public void notifyCounterObserver();
     
 }
 

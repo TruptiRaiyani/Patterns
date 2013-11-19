@@ -13,7 +13,7 @@ public class Life extends Actor
     public Life()
     {
               
-       GreenfootImage image = getImage() ;
+      GreenfootImage image = getImage() ;
        image.scale( 35, 25 ) ; 
                    
     }

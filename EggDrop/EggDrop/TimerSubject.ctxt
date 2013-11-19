@@ -11,4 +11,6 @@ comment4.params=obj
 comment4.target=void\ unregister(Observer)
 comment5.params=
 comment5.target=void\ notifyObserver()
-numComments=6
+comment6.params=
+comment6.target=void\ notifyCounterObserver()
+numComments=7

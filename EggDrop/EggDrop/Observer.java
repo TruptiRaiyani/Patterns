@@ -9,4 +9,7 @@ public interface Observer
 {
     public void update();
     public void gameOver(Farm farm);
+   
+    // For counter observer
+    public void updateScore(int addCount);
 }
