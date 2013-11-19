@@ -92,6 +92,6 @@ public class TimerSubject extends Actor implements Subject
     public void unregister(Observer obj){
              lstObserver.remove(obj);
         }
-    public void notifyObserver(){}
+    public void notifyLifeObserver(){}
       public void notifyCounterObserver(){}
 }

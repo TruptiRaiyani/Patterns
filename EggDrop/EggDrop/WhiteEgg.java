@@ -46,7 +46,7 @@ public class WhiteEgg extends Egg implements IEggsBehavior
         lives.remove(deleteObserver);
     }
     
-     public void notifyObserver(){
+     public void notifyLifeObserver(){
          //ArrayList<LifeObserver> localLife = getLives();
          for(Observer observer : lives){
             observer.update();

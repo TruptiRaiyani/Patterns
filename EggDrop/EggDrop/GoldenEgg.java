@@ -49,7 +49,7 @@ public class GoldenEgg extends Egg implements IEggsBehavior
         lives.remove(deleteObserver);
     }
     
-     public void notifyObserver(){
+     public void notifyLifeObserver(){
           for(Observer observer : lives){
             observer.update();
         }

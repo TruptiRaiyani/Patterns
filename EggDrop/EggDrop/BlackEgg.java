@@ -50,7 +50,7 @@ public class BlackEgg extends Egg implements IEggsBehavior
     {
          //do nothing
     }
-    public void notifyObserver()
+    public void notifyLifeObserver()
     {
          //do nothing
     }
