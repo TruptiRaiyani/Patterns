@@ -55,7 +55,7 @@ public class WhiteEgg extends Egg implements IEggsBehavior
     
      public void setState(String success){
         this.success = success;
-        notifyObserver();
+        notifyLifeObserver();
     }
        
     public String getState(){
