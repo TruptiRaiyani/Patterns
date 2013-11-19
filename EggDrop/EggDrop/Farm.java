@@ -13,7 +13,7 @@ public class Farm extends World
     private Basket basket;
     private Egg egg;
     private Counter counter;
-    private timer timer;
+    private TimerSubject timer;
     private Life life;
     private LifeObserver lifeobserver;
     public  static int lifecounter;
@@ -46,7 +46,7 @@ public class Farm extends World
      
       lifeobserver = new LifeObserver(this);//Calling life creator from Farm
       
-      timer = new timer();
+      timer = new TimerSubject();
       addObject(timer, 450, 15);
     }
     

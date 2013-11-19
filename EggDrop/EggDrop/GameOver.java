@@ -23,14 +23,7 @@ public class GameOver extends Actor
     }  
     public GameOver()
     {
-      /*  World world = getWorld();
-         int wide = world.getWidth();  
-        int high = world.getHeight();  
-        GreenfootImage outer = new GreenfootImage(wide, high);  
-        int leftX = (wide - inner.getWidth())/2;  
-        int topY = (high - inner.getHeight())/2;  
-        outer.drawImage(inner, leftX, topY);  
-        setImage(outer);  */
+      
     }
     
   
