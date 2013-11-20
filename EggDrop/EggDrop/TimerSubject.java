@@ -46,7 +46,7 @@ public class TimerSubject extends Actor implements Subject
             time--;  
             count = 65;  
         }  
-        display();  
+        displayTimer();  
     }    
     
     @Override
@@ -69,7 +69,7 @@ public class TimerSubject extends Actor implements Subject
         return count == 0;  
     }  
       
-    private void display()  
+    private void displayTimer()  
     {  
         Farm farm =  (Farm)getWorld();
          
