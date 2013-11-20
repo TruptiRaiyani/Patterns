@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=eggPicker\ iEggStrategy
+comment0.target=DropEggContext(int,\ IEggStrategy)
+comment1.params=iEggStrategy
+comment1.target=void\ setIEggStrategy(IEggStrategy)
+comment2.params=
+comment2.target=int\ geteggPicker()
+comment3.params=eggPicker
+comment3.target=java.lang.String\ drop(int)
+numComments=4

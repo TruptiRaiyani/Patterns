@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=eggsBehavior
-comment0.target=void\ setBehavior(IEggsBehavior)
-comment1.params=
-comment1.target=IEggsBehavior\ getBehavior()
-comment2.params=egg
-comment2.target=Egg\ drop(Egg)
-numComments=3

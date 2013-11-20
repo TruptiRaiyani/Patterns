@@ -37,14 +37,49 @@ public class Hen extends Actor
         {
 
            Farm farm =  (Farm)getWorld();
-           Egg egg ;       
+           Egg egg = null;       
            int eggPicker = Greenfoot.getRandomNumber(80);
-           DropEggStrategy dropEgg = new DropEggStrategy(); //Strategy pattern
-                  
-            if(eggPicker >= 50 && eggPicker <= 60)
+           //DropEggStrategy dropEgg = new DropEggStrategy(); //Strategy pattern
+
+           IEggStrategy whiteStrategy = new WhiteEggStrategy();
+           IEggStrategy blackStrategy = new BlackEggStrategy();
+           IEggStrategy goldenStrategy = new GoldenEggStrategy();
+           
+           DropEggContext context = new DropEggContext(eggPicker,whiteStrategy); 
+           System.out.println("EggPicker: "+eggPicker);
+           
+           String eggColor = context.drop(eggPicker);
+           System.out.println("EggColor: "+eggColor);
+           
+           if(eggColor.equals("white")){
+
+               context.setIEggStrategy(whiteStrategy);
+               egg = eggFactory.createEgg(Egg.EggType.WHITE);
+               getWorld().addObject(egg, this.getX(), this.getY()+45);
+            }
+             
+            else if(eggColor.equals("black")){
+
+               context.setIEggStrategy(blackStrategy);
+               egg = eggFactory.createEgg(Egg.EggType.BLACK);
+               getWorld().addObject(egg, this.getX(), this.getY()+45);
+            }
+            else if(eggColor.equals("golden")){
+               
+               context.setIEggStrategy(goldenStrategy);
+               egg = eggFactory.createEgg(Egg.EggType.GOLDEN);
+               getWorld().addObject(egg, this.getX(), this.getY()+45);
+            }
+            
+            egg.register(farm.getLifeObserver());//register life creator observer into egg subject              
+
+            /*if(eggPicker >= 50 && eggPicker <= 60)
             {
-             dropEgg.setBehavior(new GoldenEgg());
-             egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.GOLDEN)); //Command and strategy pattern
+               IEggStrategy whiteStrategy = new WhiteEggStrategy();
+               DropEggContext context = new DropEggContext(whiteStrategy);
+               context.dropEgg(eggFactory.createEgg(Egg.EggType.GOLDEN));
+            // dropEgg.setBehavior(new GoldenEgg());
+             //egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.GOLDEN)); //Command and strategy pattern
              getWorld().addObject(egg, this.getX(), this.getY()+45);
              
             }
@@ -59,8 +94,8 @@ public class Hen extends Actor
             dropEgg.setBehavior(new WhiteEgg());
             egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.WHITE)); //Command and strategy pattern
             getWorld().addObject(egg, this.getX(), this.getY()+45);
-            }
-             egg.register(farm.getLifeObserver());//register life creator observer into egg subject              
+            }*/
+
         }
 
     }  

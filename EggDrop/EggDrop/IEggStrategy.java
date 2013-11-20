@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public interface IEggsBehavior 
+public interface IEggStrategy 
 {
-  public Egg dropEgg(Egg egg);
+  public String dropEgg(int eggPicker);
 }
