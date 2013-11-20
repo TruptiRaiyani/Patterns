@@ -8,12 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlackEggStrategy extends Actor implements IEggStrategy
 {
+     EggFactory eggFactory;
+        
+      public BlackEggStrategy(EggFactory eggFactory){
+        this.eggFactory = eggFactory;
+        }
         @Override
-     public String dropEgg(int eggPicker){
-         if(eggPicker >= 60 && eggPicker <= 70)
-          {
-              return "black";          
-          }
-          return "white";
+     public Egg dropEgg(){
+         return eggFactory.createEgg(Egg.EggType.BLACK);
         }
 }

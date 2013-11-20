@@ -8,14 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GoldenEggStrategy extends Actor implements IEggStrategy
 {
-    @Override
-    public String dropEgg(int eggPicker){
+    EggFactory eggFactory;
         
-        if(eggPicker >= 50 && eggPicker <= 60)
-            {
-               return "golden"; 
-            }
-                return "white";
-          
+      public GoldenEggStrategy(EggFactory eggFactory){
+        this.eggFactory = eggFactory;
+        }
+    @Override
+     public Egg dropEgg(){
+       return eggFactory.createEgg(Egg.EggType.GOLDEN);
         }
 }

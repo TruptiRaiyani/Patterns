@@ -12,26 +12,20 @@ public class DropEggContext
    // IEggsBehavior eggsBehavior;
 
     IEggStrategy iEggStrategy;
-    int eggPicker;
     
-    public DropEggContext(int eggPicker, IEggStrategy iEggStrategy ) {
-		this.eggPicker = eggPicker;
-		this.iEggStrategy = iEggStrategy;
+    public DropEggContext() {
+		
 	}
     public void setIEggStrategy(IEggStrategy iEggStrategy)
     {
         this.iEggStrategy = iEggStrategy;
     }
 
-    public int geteggPicker()
-    {
-        return eggPicker;
-    }
+   
 
-    public String drop(int eggPicker)
+    public Egg dropEgg()
     {
-        System.out.println("Inside DropEggContext" +eggPicker);
-        return iEggStrategy.dropEgg(eggPicker);
+        return iEggStrategy.dropEgg();
     }
 
 }

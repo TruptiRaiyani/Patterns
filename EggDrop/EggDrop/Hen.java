@@ -41,33 +41,27 @@ public class Hen extends Actor
            int eggPicker = Greenfoot.getRandomNumber(80);
            //DropEggStrategy dropEgg = new DropEggStrategy(); //Strategy pattern
 
-           IEggStrategy whiteStrategy = new WhiteEggStrategy();
-           IEggStrategy blackStrategy = new BlackEggStrategy();
-           IEggStrategy goldenStrategy = new GoldenEggStrategy();
+           IEggStrategy whiteStrategy = new WhiteEggStrategy(eggFactory);
+           IEggStrategy blackStrategy = new BlackEggStrategy(eggFactory);
+           IEggStrategy goldenStrategy = new GoldenEggStrategy(eggFactory);
            
-           DropEggContext context = new DropEggContext(eggPicker,whiteStrategy); 
-           System.out.println("EggPicker: "+eggPicker);
-           
-           String eggColor = context.drop(eggPicker);
-           System.out.println("EggColor: "+eggColor);
-           
-           if(eggColor.equals("white")){
-
-               context.setIEggStrategy(whiteStrategy);
-               egg = eggFactory.createEgg(Egg.EggType.WHITE);
-               getWorld().addObject(egg, this.getX(), this.getY()+45);
-            }
-             
-            else if(eggColor.equals("black")){
-
-               context.setIEggStrategy(blackStrategy);
-               egg = eggFactory.createEgg(Egg.EggType.BLACK);
-               getWorld().addObject(egg, this.getX(), this.getY()+45);
-            }
-            else if(eggColor.equals("golden")){
+           DropEggContext context = new DropEggContext();
+            
+            if(eggPicker >= 50 && eggPicker <= 60){
                
                context.setIEggStrategy(goldenStrategy);
-               egg = eggFactory.createEgg(Egg.EggType.GOLDEN);
+               egg = context.dropEgg();
+               getWorld().addObject(egg, this.getX(), this.getY()+45);
+            }
+            else if(eggPicker >= 60 && eggPicker <= 70){
+
+               context.setIEggStrategy(blackStrategy);
+               egg = context.dropEgg();
+               getWorld().addObject(egg, this.getX(), this.getY()+45);
+            }
+            else{
+               context.setIEggStrategy(whiteStrategy);
+               egg = context.dropEgg();
                getWorld().addObject(egg, this.getX(), this.getY()+45);
             }
             

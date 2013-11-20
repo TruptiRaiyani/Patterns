@@ -8,5 +8,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public interface IEggStrategy 
 {
-  public String dropEgg(int eggPicker);
+  public Egg dropEgg();
 }
