@@ -55,12 +55,7 @@ public class BlackEgg extends Egg
          //do nothing
     }
      public void notifyTimerObserver(){}
-    
-   /* //Strategy Design Pattern                    
-    public Egg dropEgg(Egg egg){
-          System.out.println("Drop Black Egg");
-          return egg;
-        }*/
+  
       
   }    
 

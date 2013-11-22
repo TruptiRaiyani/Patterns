@@ -32,7 +32,7 @@ public class StopGame  implements Observer
          sound.play();
       
         sound.setVolume(80);
-        // farm.addObject(new GameOver(), farm.getWidth()/2, farm.getHeight()/2);
+      
             Greenfoot.stop();
     }
     public void update(){}

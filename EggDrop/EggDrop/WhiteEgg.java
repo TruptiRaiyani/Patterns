@@ -63,12 +63,7 @@ public class WhiteEgg extends Egg
     }
      
     public void notifyTimerObserver(){}
-    
-   /* //Strategy Design Pattern
-    public Egg dropEgg(Egg egg){
-          System.out.println("Drop White Egg");
-          return egg;
-        }*/
+   
         
   }    
 

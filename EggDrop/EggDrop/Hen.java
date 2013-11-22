@@ -67,28 +67,7 @@ public class Hen extends Actor
             
             egg.register(farm.getLifeObserver());//register life creator observer into egg subject              
 
-            /*if(eggPicker >= 50 && eggPicker <= 60)
-            {
-               IEggStrategy whiteStrategy = new WhiteEggStrategy();
-               DropEggContext context = new DropEggContext(whiteStrategy);
-               context.dropEgg(eggFactory.createEgg(Egg.EggType.GOLDEN));
-            // dropEgg.setBehavior(new GoldenEgg());
-             //egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.GOLDEN)); //Command and strategy pattern
-             getWorld().addObject(egg, this.getX(), this.getY()+45);
-             
-            }
-            else if (eggPicker >= 60 && eggPicker <= 70)
-            {
-             dropEgg.setBehavior(new BlackEgg());
-             egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.BLACK)); //Command and strategy pattern
-             getWorld().addObject(egg, this.getX(), this.getY()+45);
-            }
-            else
-            {
-            dropEgg.setBehavior(new WhiteEgg());
-            egg = dropEgg.drop(eggFactory.createEgg(Egg.EggType.WHITE)); //Command and strategy pattern
-            getWorld().addObject(egg, this.getX(), this.getY()+45);
-            }*/
+          
 
         }
 

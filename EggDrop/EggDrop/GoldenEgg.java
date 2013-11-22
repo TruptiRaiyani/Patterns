@@ -64,13 +64,6 @@ public class GoldenEgg extends Egg
         return success;
     }
    public void notifyTimerObserver(){}
-    
-   /*//Strategy Design Pattern
-    public Egg dropEgg(Egg egg){
-        System.out.println("Drop Golden Egg");
-        return egg;
-    }*/
-    
-       
+  
 }
 

@@ -13,7 +13,6 @@ public class GameOver extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
      String text = " GAME OVER! \n YOU WIN! ";  
-   // GreenfootImage inner = new GreenfootImage(text, 48, Color.black, new Color(0, 0, 0, 96));
     public void act()  
     {  
         if (Greenfoot.mouseClicked(this))  
