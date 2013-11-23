@@ -24,7 +24,9 @@ public class DisplayMessage  implements Observer
     {
        
          this.farm = farm;
-         farm.addObject(new GameOver(), farm.getWidth()/2, farm.getHeight()/2);
+         GameOver timeover = new GameOver();
+         timeover.setImage(new GreenfootImage("TimeOver.jpg"));
+         farm.addObject(timeover, farm.getWidth()/2, farm.getHeight()/2);
           
     }
     public void update(){}
